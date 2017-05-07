@@ -78,7 +78,7 @@
           </ul>
         </li>
       
-        <li><a href=index.php?action=historialEventoC"><i class="fa fa-book"></i> <span>Historial de Eventos</span></a></li>
+        <li><a href="index.php?action=historialEventoC"><i class="fa fa-book"></i> <span>Historial de Eventos</span></a></li>
       
       </ul>
     </section>
