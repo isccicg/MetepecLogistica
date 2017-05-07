@@ -38,7 +38,7 @@ class mvc_controllerUserCam {
 		$this->view_page($pagina);
    }  
    
-    function historialEvento()
+    function historialEventoC()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
 		$html = $this->load_page('app/views/default/modules/userCam/m.historialEvento.php');

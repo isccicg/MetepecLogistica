@@ -48,9 +48,9 @@
 	{
 			$userC->crearPregira();	
 	}
-	else 	if( $_GET['action'] == 'historialEvento' ) //muestra  el modulo "historial Evento"
+	else 	if( $_GET['action'] == 'historialEventoC' ) //muestra  el modulo "historial Evento"
 	{
-			$userC->historialEvento();	
+			$userC->historialEventoC();	
 	}   	
 	else 	if( $_GET['action'] == 'historialGira' ) //muestra  el modulo "historial Gira"
 	{
