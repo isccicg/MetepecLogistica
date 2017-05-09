@@ -32,6 +32,19 @@
 <!-- AdminLTE App -->
 <script src="app/views/default/efectos/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="app/views/default/efectos/dist/js/pages/dashboard.js"></script>
+ <script src="app/views/default/efectos/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="app/views/default/efectos/dist/js/demo.js"></script>
+<!-- Alta de pregira -->
+<script src="app/views/default/efectos/dist/js/altapregira.js"></script>
+<!-- iCheck -->
+<script src="app/views/default/efectos/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
