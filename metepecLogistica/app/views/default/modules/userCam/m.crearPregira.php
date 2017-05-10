@@ -69,54 +69,20 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="form-group">
-                      <label>FED</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
+                      <label></label>
+                        <select class="form-control">
+                          <option>FED</option>
+                          <option>GEM</option>
+                          <option>MUNICIPAL</option>
+                          <option>ONG</option>
+                          <option>CBN PRI</option>
+                          <option>CDE PRI</option>
+                        </select>
                     </div>
                   </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>GEM</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>MUNICIPAL</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>ONG</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>CBN PRI</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="form-group">
-                      <label>CDE PRI</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control pull-right">
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
                 <div class="row">
                   <div class="col-md-4">
@@ -249,7 +215,7 @@
           <!-- /.box -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="bg-primary text-center pad-basic no-btm">CONVOCADOS</h3>
+              <h4 class="bg-primary text-center pad-basic no-btm">CONVOCADOS</h4>
             </div>
             <div class="box-body">
               <div class="col-md-12">
