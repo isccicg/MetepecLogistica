@@ -132,6 +132,23 @@
                     </div>
                   </div>
                 </div> <!-- /.row -->
+                
+              </div>
+              <!-- /.box-body -->
+
+          </div>
+    <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs pull-right">
+        <li><a href="#convocados" data-toggle="tab">Convocados</a></li>
+      </ul>
+      <div class="tab-content no-padding">  
+        <div class="chart tab-pane active" id="act-agenda">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Convocados</h3>
+            </div>
+            <div class="box-body">
+              <div class="col-md-12">
                 <div class="row">
                   <div class="col-md-3">
                     <div class="form-group">
@@ -206,13 +223,13 @@
                   </div>
                 </div>
               </div>
-              <!-- /.box-body -->
-
-              <div class="box-footer">
-                <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
-              </div>
-          </div>
-          <!-- /.box -->
+              
+            </div>
+            <div class="box-footer">
+              <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
+            </div>
+          </div><!-- /.box -->
+          
           <div class="box box-primary">
             <div class="box-header with-border">
               <h4 class="bg-primary text-center pad-basic no-btm">CONVOCADOS</h4>
@@ -243,6 +260,9 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
         </div>
         

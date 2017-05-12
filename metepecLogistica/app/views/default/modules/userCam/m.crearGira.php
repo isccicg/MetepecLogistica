@@ -169,9 +169,7 @@
 
                     </div>
                     <!-- /.box-body -->
-                    <div class="box-footer">
-                        <button  class="btn btn-success pull-right">Agregar</button>
-                    </div>
+                    
                 </div>
                 <!-- /.box -->
 
@@ -179,6 +177,8 @@
                 <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs pull-right">
+                        <li><a href="#tap-2" data-toggle="tab">Tap 2</a></li>
+                        <li><a href="#tap-1" data-toggle="tab">Tap 1</a></li>
                         <li><a href="#int-pre" data-toggle="tab">Integrantes Presidium</a></li>
                         <li><a href="#int-cab" data-toggle="tab">Integrantes Cabildo</a></li>
                         <li class="active"><a href="#act-agenda" data-toggle="tab">Actividades Agenda</a></li>
@@ -421,6 +421,212 @@
                         </div>
                         <div class="chart tab-pane" id="int-pre">
                             <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Integrantes Presidium </h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>NOMBRE</label>
+                                                <select name="Datos[selectDependencia]" class="form-control">
+                                                    <option>Seleccionar dependencia</option>
+                                                    <option>Dirección de gobierno</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>CARGO</label>
+                                                <select name="Datos[selectEnlace]" class="form-control">
+                                                    <option>Seleccionar enlace</option>
+                                                    <option>Octavio Domiguez Ayala</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /.row -->
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>ASISTIÓ</label>
+                                                <div class="input-group">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>NOMBRE DE REPRESENTANTE </label>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>CUMPLIÓ</label>
+                                                <div class="input-group">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
+                                </div>
+                            </div><!-- /.box -->
+
+                            <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->   
+
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
+                                </div>
+                                <div class="box-body">
+                                    <div class="col-md-12">
+                                        <div class="col-lg-12 col-xs-12 table-responsive">
+                                            <table class="table table-hover table-bordered table-condensed text-center">
+                                                <thead>
+                                                <th>DEPENDENCIA</th>
+                                                <th>ENLACE</th>
+                                                <th>TELEFONO</th>
+                                                <th>EMAIL</th>
+                                                <th>ASISTIO</th>
+                                                <th>COMISIONES</th>
+                                                <th>CUMPLIÓ</th>
+                                                <th>ELIMINAR</th>
+                                                </thead>
+                                                <tbody id="filaTbody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="pull-right">
+                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart tab-pane" id="tap-1">
+                          <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Integrantes Presidium </h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>NOMBRE</label>
+                                                <select name="Datos[selectDependencia]" class="form-control">
+                                                    <option>Seleccionar dependencia</option>
+                                                    <option>Dirección de gobierno</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>CARGO</label>
+                                                <select name="Datos[selectEnlace]" class="form-control">
+                                                    <option>Seleccionar enlace</option>
+                                                    <option>Octavio Domiguez Ayala</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /.row -->
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>ASISTIÓ</label>
+                                                <div class="input-group">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>NOMBRE DE REPRESENTANTE </label>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>CUMPLIÓ</label>
+                                                <div class="input-group">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
+                                </div>
+                            </div><!-- /.box -->
+
+                            <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->   
+
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
+                                </div>
+                                <div class="box-body">
+                                    <div class="col-md-12">
+                                        <div class="col-lg-12 col-xs-12 table-responsive">
+                                            <table class="table table-hover table-bordered table-condensed text-center">
+                                                <thead>
+                                                <th>DEPENDENCIA</th>
+                                                <th>ENLACE</th>
+                                                <th>TELEFONO</th>
+                                                <th>EMAIL</th>
+                                                <th>ASISTIO</th>
+                                                <th>COMISIONES</th>
+                                                <th>CUMPLIÓ</th>
+                                                <th>ELIMINAR</th>
+                                                </thead>
+                                                <tbody id="filaTbody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="pull-right">
+                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart tab-pane" id="tap-2">
+                          <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Integrantes Presidium </h3>
