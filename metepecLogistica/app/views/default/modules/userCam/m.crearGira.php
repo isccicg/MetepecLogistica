@@ -83,12 +83,20 @@
                             </div>
                         </div>
                         <!-- DDAAATOSSO -->
-
+						
+						
+						  
                         <!-- DDAAATOSSO -->
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-10">
                                 <div class="form-group">
                                     <label>NOMBRE DEL EVENTO</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+							<div class="col-md-2">
+                                <div class="form-group">
+                                    <label>NUMERO ASISTENTES</label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -102,70 +110,48 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label>DOMICILIO</label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="form-group">
-                                    <label>ASISTENTES</label>
+                                    <label>COLONIA</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+							 <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>SECCION</label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                         </div>  <!-- /.row -->
-
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>FED</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>GEM</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>MUNICIPAL</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>ONG</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>CBN PRI</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>CDE PRI</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control pull-right">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>               
+						
+						
+                        <div class = "row">
+					
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>ORGANIZADOR</label>
+                        <select class="form-control">
+                          <option>Seleccionar dependencia</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>DEPENDENCIA</label>
+                        <select class="form-control">
+                          <option>Seleccionar enlace</option>
+                        </select>
+                    </div>
+                  </div>                  
+               
+						</div>
+                                
 
                     </div>
                     <!-- /.box-body -->
@@ -177,36 +163,22 @@
                 <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs pull-right">
-                        <li><a href="#tap-2" data-toggle="tab">Tap 2</a></li>
-                        <li><a href="#tap-1" data-toggle="tab">Tap 1</a></li>
-                        <li><a href="#int-pre" data-toggle="tab">Integrantes Presidium</a></li>
-                        <li><a href="#int-cab" data-toggle="tab">Integrantes Cabildo</a></li>
-                        <li class="active"><a href="#act-agenda" data-toggle="tab">Actividades Agenda</a></li>
+                        <li><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
+                        <li><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>
+                        <li><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
+                        <li><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
+                        <li class="active"><a href="#presidium" data-toggle="tab">Presidium</a></li>
                     </ul>
                     <div class="tab-content no-padding">  
-                        <div class="chart tab-pane active" id="act-agenda">
+                        <div class="chart tab-pane active" id="presidium">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Actividades Agenda </h3>
+                                    <h3 class="box-title">Ingrese datos  :</h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <div class="box-body">
-                                    <div class="col-md-12">
-                                        <div class="pull-right">
-                                            <div class="form-group">
-                                                <label>Pregira</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
@@ -217,31 +189,27 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
+                                                
                                                 <label>ENLACE</label>
-                                                <select name="Datos[selectEnlace]" class="form-control">
-                                                    <option>Seleccionar enlace</option>
-                                                    <option>Octavio Domiguez Ayala</option>
-                                                </select>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <div class="form-group">
+                                                
                                                 <label>TELEFONO</label>
-                                                <select name="Datos[selectTelefono]" class="form-control">
-                                                    <option>Seleccionar telefono</option>
-                                                    <option>7233456789</option>
-                                                </select>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>EMAIL</label>
-                                                <select name="Datos[selectEmail]" class="form-control">
-                                                    <option>Seleccionar email</option>
-                                                    <option>prueba@outlook.com</option>
-                                                </select>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+
                                             </div>
                                         </div>
                                     </div> <!-- /.row -->
@@ -289,7 +257,7 @@
                             <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h4 class="bg-primary text-center pad-basic no-btm">AGENDA</h4>
+                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
                                 </div>
                                 <div class="box-body">
                                     <div class="col-md-12">
@@ -318,69 +286,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart tab-pane" id="int-cab">
+                        <div class="chart tab-pane" id="invEspeciales">
                             <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Integrantes Cabildo </h3>
+                                    <h3 class="box-title">Ingrese datos : </h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <div class="box-body">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-6">
                                             <div class="form-group">
+                                                <div class="form-group">
                                                 <label>NOMBRE</label>
-                                                <select name="Datos[selectDependencia]" class="form-control">
-                                                    <option>Seleccionar dependencia</option>
-                                                    <option>Dirección de gobierno</option>
-                                                </select>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
+                                               <div class="form-group">
                                                 <label>CARGO</label>
-                                                <select name="Datos[selectEnlace]" class="form-control">
-                                                    <option>Seleccionar enlace</option>
-                                                    <option>Octavio Domiguez Ayala</option>
-                                                </select>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
                                             </div>
                                         </div>   
                                     </div> <!-- /.row -->
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>ASISTIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE DE REPRESENTANTE </label>
-                                                <input type="text" name="Datos[comisiones]" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CUMPLIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
                                     <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
@@ -390,7 +323,7 @@
                             <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->   
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h4 class="bg-primary text-center pad-basic no-btm">CABILDO</h4>
+                                    <h4 class="bg-primary text-center pad-basic no-btm">INVITADOS ESPECIALES</h4>
                                 </div>
                                 <div class="box-body">
                                     <div class="col-md-12">
@@ -419,35 +352,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart tab-pane" id="int-pre">
+                        <div class="chart tab-pane" id="preMunicipal">
                             <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Integrantes Presidium </h3>
+                                    <h3 class="box-title">Ingrese datos : </h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE</label>
-                                                <select name="Datos[selectDependencia]" class="form-control">
-                                                    <option>Seleccionar dependencia</option>
-                                                    <option>Dirección de gobierno</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CARGO</label>
-                                                <select name="Datos[selectEnlace]" class="form-control">
-                                                    <option>Seleccionar enlace</option>
-                                                    <option>Octavio Domiguez Ayala</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div> <!-- /.row -->
+                                   
 
                                     <div class="row">
                                         <div class="col-md-3">
@@ -493,7 +407,7 @@
 
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
+                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDENTE MUNICIPAL</h4>
                                 </div>
                                 <div class="box-body">
                                     <div class="col-md-12">
@@ -522,11 +436,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart tab-pane" id="tap-1">
+                        <div class="chart tab-pane" id="inteCabildo">
                           <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Integrantes Presidium </h3>
+                                    <h3 class="box-title">Ingrese datos : </h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
@@ -596,7 +510,7 @@
 
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
+                                    <h4 class="bg-primary text-center pad-basic no-btm">INTEGRANTES DEL CABILDO</h4>
                                 </div>
                                 <div class="box-body">
                                     <div class="col-md-12">
@@ -625,69 +539,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chart tab-pane" id="tap-2">
+                        <div class="chart tab-pane" id="ordenDia">
                           <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Integrantes Presidium </h3>
+                                    <h3 class="box-title">Ingrese datos :</h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE</label>
-                                                <select name="Datos[selectDependencia]" class="form-control">
-                                                    <option>Seleccionar dependencia</option>
-                                                    <option>Dirección de gobierno</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CARGO</label>
-                                                <select name="Datos[selectEnlace]" class="form-control">
-                                                    <option>Seleccionar enlace</option>
-                                                    <option>Octavio Domiguez Ayala</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div> <!-- /.row -->
+                                   
 
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>ASISTIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE DE REPRESENTANTE </label>
+                                                <label>ACTIVIDAD :</label>
                                                 <input type="text" name="Datos[comisiones]" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CUMPLIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
@@ -699,7 +570,7 @@
 
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h4 class="bg-primary text-center pad-basic no-btm">PRESIDIUM</h4>
+                                    <h4 class="bg-primary text-center pad-basic no-btm">ORDEN DEL DIA</h4>
                                 </div>
                                 <div class="box-body">
                                     <div class="col-md-12">

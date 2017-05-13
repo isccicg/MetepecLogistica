@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Pregira prueba
+        Pregira
         <small>crear</small>
       </h1>
       <ol class="breadcrumb">
@@ -21,7 +21,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Pregira</h3>
+              <h3 class="box-title">Datos Generales</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -42,10 +42,22 @@
                 </div>
                 <div class="col-md-12">
                   <div class="row ">
+                  <div class="col-md-3 pull-right">
+                      <!-- Date -->
+                      <div class="form-group">
+                        <label>FOLIO :</label>
+                        <div class="input-group date">
+                          <div class="input-group-addon">
+                            <i class="fa fa-hashtag"></i>
+                          </div>
+                          <input type="text" class="form-control pull-right" >
+                        </div>
+                      </div>
+                    </div>
                     <div class="col-md-3 pull-right">
                       <!-- Date -->
                       <div class="form-group">
-                        <label>FOLIO:</label>
+                        <label>HORA :</label>
                         <div class="input-group date">
                           <div class="input-group-addon">
                             <i class="fa fa-hashtag"></i>
@@ -68,26 +80,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label></label>
-                        <select class="form-control">
-                          <option>FED</option>
-                          <option>GEM</option>
-                          <option>MUNICIPAL</option>
-                          <option>ONG</option>
-                          <option>CBN PRI</option>
-                          <option>CDE PRI</option>
-                        </select>
-                    </div>
-                  </div>
-                  
-                </div>
+               
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label>DEPENDENCIA</label>
+                      <label>ORGANIZADOR</label>
                         <select class="form-control">
                           <option>Seleccionar dependencia</option>
                         </select>
@@ -95,43 +92,102 @@
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label>ENLACE</label>
+                      <label>DEPENDENCIA</label>
                         <select class="form-control">
                           <option>Seleccionar enlace</option>
                         </select>
                     </div>
-                  </div>
-                  <div class="col-md-4">
+                  </div>                  
+                </div>  <!-- /.row -->
+
+                <div class="row">
+                  <div class="col-md-3">
                     <div class="form-group">
-                      <label>TEL</label>
+                      <label>RESPONSABLE</label>
                         <input type="text" class="form-control">
                     </div>
                   </div>
-                </div>  <!-- /.row -->
-                <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                     <div class="form-group">
-                      <label>DIRECCIÓN MUNICPAL ENLACE</label>
-                        <select class="form-control">
-                          <option>Seleccionar dirección</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label>RESPONSABLE</label>
+                      <label>CARGO</label>
                         <select class="form-control">
                           <option>Seleccionar responsable</option>
                         </select>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-3">
                     <div class="form-group">
                       <label>EMAIL</label>
                         <input type="text" class="form-control">
                     </div>
                   </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>TELEFONO</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  </div>
                 </div> <!-- /.row -->
+                 <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>ENLACE MUNICIPAL</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>CARGO</label>
+                        <select class="form-control">
+                          <option>Seleccionar responsable</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>EMAIL</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>TELEFONO</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div> <!-- /.row -->
+
+                <div class="row">
+                   <div class="col-md-12">
+                    <div class="form-group">
+                      <label>NOMBRE DEL EVENTO</label>
+                        <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>DELEGACION</label>
+                                    <select class="form-control">
+                                        <option>Seleccionar enlace</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label>DOMICILIO</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>COLONIA</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>  <!-- /.row -->
                 
               </div>
               <!-- /.box-body -->
