@@ -167,7 +167,21 @@
                 </div>
 
                  <div class="row">
+                         
+                          
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>DOMICILIO</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
                             <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>COLONIA</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+							  <div class="col-md-3">
                                 <div class="form-group">
                                     <label>DELEGACION</label>
                                     <select class="form-control">
@@ -175,15 +189,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-7">
+							 <div class="col-md-1">
                                 <div class="form-group">
-                                    <label>DOMICILIO</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>COLONIA</label>
+                                    <label>SECCION</label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
