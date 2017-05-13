@@ -102,14 +102,7 @@
                             </div>
                         </div>  <!-- /.row -->
                         <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label>DELEGACION</label>
-                                    <select class="form-control">
-                                        <option>Seleccionar enlace</option>
-                                    </select>
-                                </div>
-                            </div>
+                          
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label>DOMICILIO</label>
@@ -120,6 +113,14 @@
                                 <div class="form-group">
                                     <label>COLONIA</label>
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+							  <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>DELEGACION</label>
+                                    <select class="form-control">
+                                        <option>Seleccionar enlace</option>
+                                    </select>
                                 </div>
                             </div>
 							 <div class="col-md-1">
@@ -180,42 +181,19 @@
                                 <div class="box-body">
                                    
                                     <div class="row">
-                                        <div class="col-md-3">
+									     <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>DEPENDENCIA</label>
-                                                <select name="Datos[selectDependencia]" class="form-control">
-                                                    <option>Seleccionar dependencia</option>
-                                                    <option>Dirección de gobierno</option>
-                                                </select>
+                                                <label>NOMBRE DEL TITULAR </label>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
+                                        </div>
+									    <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>CARGO</label>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-group">
-                                                
-                                                <label>ENLACE</label>
-                                                <input type="text" name="Datos[comisiones]" class="form-control">
-                                            
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                
-                                                <label>TELEFONO</label>
-                                                <input type="text" name="Datos[comisiones]" class="form-control">
-                                            
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>EMAIL</label>
-                                                <input type="text" name="Datos[comisiones]" class="form-control">
-
-                                            </div>
-                                        </div>
-                                    </div> <!-- /.row -->
-
-                                    <div class="row">
-                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>ASISTIÓ</label>
                                                 <div class="input-group">
@@ -227,26 +205,39 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
+                                        </div>                                   
+                                       
+                                    </div> <!-- /.row -->
+
+                                    <div class="row">
+                                        
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>COMISIONES</label>
+                                                <label>NOMBRE DEL REPRESENTANTE</label>
                                                 <input type="text" name="Datos[comisiones]" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+										 <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>CUMPLIÓ</label>
+                                                <label>CARGO</label>
+                                                <input type="text" name="Datos[comisiones]" class="form-control">
+                                            </div>
+                                        </div>
+										
+										 <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>ASISTIÓ</label>
                                                 <div class="input-group">
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
                                                     </label>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
+                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>     
+                                       
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
@@ -281,7 +272,7 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
+									    <button onclick="agregarConvocados()" class="btn btn-success pull-right">Continuar</button>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +338,8 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
+									  <button onclick="agregarConvocados()" class="btn btn-success pull-right">Continuar</button>
+
                                     </div>
                                 </div>
                             </div>
@@ -431,8 +423,8 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
-                                    </div>
+                   					    <button onclick="agregarConvocados()" class="btn btn-success pull-right">Continuar</button>
+									</div>
                                 </div>
                             </div>
                         </div>
@@ -440,66 +432,115 @@
                           <!--DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->        
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Ingrese datos : </h3>
+                                    <h3 class="box-title">Seleccione integrantes : </h3>
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
                                 <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE</label>
-                                                <select name="Datos[selectDependencia]" class="form-control">
-                                                    <option>Seleccionar dependencia</option>
-                                                    <option>Dirección de gobierno</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CARGO</label>
-                                                <select name="Datos[selectEnlace]" class="form-control">
-                                                    <option>Seleccionar enlace</option>
-                                                    <option>Octavio Domiguez Ayala</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    <div class="row"> 
+									     <div class="col-md-12">
+                                          
+                                              
+                                                 <!-- /.box-header -->
+													
+													  <ul class="todo-list">
+														<li>
+														  <!-- drag handle -->
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <!-- checkbox -->
+														  <input type="checkbox" value="">
+														  <!-- todo text -->
+														  <span class="text">Design a nice theme</span>
+														  <!-- Emphasis label -->
+														  <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+														  <!-- General tools such as edit or delete-->
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+														<li>
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <input type="checkbox" value="">
+														  <span class="text">Make the theme responsive</span>
+														  <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+														<li>
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <input type="checkbox" value="">
+														  <span class="text">Let theme shine like a star</span>
+														  <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+														<li>
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <input type="checkbox" value="">
+														  <span class="text">Let theme shine like a star</span>
+														  <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+														<li>
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <input type="checkbox" value="">
+														  <span class="text">Check your messages and notifications</span>
+														  <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+														<li>
+															  <span class="handle">
+																<i class="fa fa-ellipsis-v"></i>
+																<i class="fa fa-ellipsis-v"></i>
+															  </span>
+														  <input type="checkbox" value="">
+														  <span class="text">Let theme shine like a star</span>
+														  <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
+														  <div class="tools">
+															<i class="fa fa-edit"></i>
+															<i class="fa fa-trash-o"></i>
+														  </div>
+														</li>
+													  </ul>
+													
+                                             <!-- /.box-body -->
+												
+                                          
+                                            <!-- /.box -->
+                                         </div>
+									
+									
+									
+
                                     </div> <!-- /.row -->
 
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>ASISTIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistencia]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>NOMBRE DE REPRESENTANTE </label>
-                                                <input type="text" name="Datos[comisiones]" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>CUMPLIÓ</label>
-                                                <div class="input-group">
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
                                     <button onclick="agregarConvocados()" class="btn btn-success pull-right">Agregar</button>
@@ -534,8 +575,8 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
-                                    </div>
+                                   	    <button onclick="agregarConvocados()" class="btn btn-success pull-right">Continuar</button>
+									</div>
                                 </div>
                             </div>
                         </div>
@@ -594,7 +635,7 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-                                        <input type="submit" name="btnGuardarPregira" class="btn btn-primary disabled" id="bntGuardar">
+                                        <button onclick="agregarConvocados()" class="btn btn-success pull-right">Continuar</button>
                                     </div>
                                 </div>
                             </div>
