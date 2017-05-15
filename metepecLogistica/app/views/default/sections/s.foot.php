@@ -39,6 +39,8 @@
 <script src="app/views/default/efectos/dist/js/altapregira.js"></script>
 <!-- iCheck -->
 <script src="app/views/default/efectos/plugins/iCheck/icheck.min.js"></script>
+<!-- Alta de gira -->
+<script src="app/views/default/efectos/dist/js/altagira.js"></script>
 <script>
   $(function () {
     $('input').iCheck({

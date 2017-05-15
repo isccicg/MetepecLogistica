@@ -1,0 +1,7 @@
+.disabledTab {
+    
+    cursor:not-allowed;
+}
+.disabledTab a {
+    pointer-events: none;
+}
