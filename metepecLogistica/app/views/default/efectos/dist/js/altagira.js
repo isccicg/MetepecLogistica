@@ -90,3 +90,9 @@ $("#btnIcContinuar").click(function()
 	$("#od").removeClass("disabledTab");
 	$(".nav-tabs li:eq(0) a").tab('show');
 });
+$('.clockpicker').clockpicker(
+{
+	donetext: 'Agregar hora',
+	autoclose: true,
+	default: 'now'
+});

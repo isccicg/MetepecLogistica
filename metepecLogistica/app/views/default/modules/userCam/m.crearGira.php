@@ -1,4 +1,4 @@
-Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -60,11 +60,11 @@ Content Wrapper. Contains page content -->
                                     <!-- Date -->
                                     <div class="form-group">
                                         <label>HORA:</label>
-                                        <div class="input-group date">
+                                        <div class="input-group clockpicker">
                                             <div class="input-group-addon">
-                                                <i class="fa fa-hashtag"></i>
+                                                <i class="glyphicon glyphicon-time"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" >
+                                            <input type="text" class="form-control pull-right" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +331,7 @@ Content Wrapper. Contains page content -->
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-									  <button onclick="" class="btn btn-success pull-right" disabled="true" id="btnIeContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></button>
+									  <button onclick="" class="btn btn-success pull-right" disabled="true" id="btnIeContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
 
                                     </div>
                                 </div>
@@ -383,7 +383,7 @@ Content Wrapper. Contains page content -->
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <button class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></button>
+                                    <button class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
                                 </div>
                             </div><!-- /.box -->
 
@@ -399,7 +399,7 @@ Content Wrapper. Contains page content -->
                                 <!-- form start -->
                                 <div class="box-body">
                                     <div class="row"> 
-									     <div class="col-md-12">
+									    <div class="col-md-12">
 											<ul class="todo-list">
 											    <li>
 													<!-- drag handle -->
@@ -452,7 +452,7 @@ Content Wrapper. Contains page content -->
 											    </li>
 														
 											</ul>							
-                                         </div><!-- /.box -->
+                                        </div><!-- /.box -->
                                     </div> <!-- /.row -->
 
                                     
@@ -504,7 +504,7 @@ Content Wrapper. Contains page content -->
                             </div><!-- /.box -->
                         </div>
                     </div>
-                </div>
+                </div> <!-- /tabs -->
 
             </div>
 
