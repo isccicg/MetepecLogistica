@@ -134,11 +134,16 @@
 						
                         <div class = "row">
 					
-                  <div class="col-md-4">
+              <div class="col-md-4">
                     <div class="form-group">
-                      <label>ORGANIZADOR</label>
+                      <label>RESPONSABLE U ORGANIZADOR</label>
                         <select class="form-control">
-                          <option>Seleccionar dependencia</option>
+                          <option>Gobierno Federal</option>
+						  <option>Gobierno Estatal</option>
+                          <option>Gobierno Municipal</option>
+						  <option>ONG</option>
+						  <option>CDE PRI</option>
+						  <option>CEN PRI</option>
                         </select>
                     </div>
                   </div>
@@ -149,7 +154,17 @@
                           <option>Seleccionar enlace</option>
                         </select>
                     </div>
-                  </div>                  
+                  </div>
+				  
+				  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>DEPENDENCIA MUNICIPAL</label>
+                        <select class="form-control">
+                          <option>Seleccionar enlace</option>
+                        </select>
+                    </div>
+                  </div>    
+				             
                
 						</div>
                                 

@@ -42,51 +42,59 @@
                 </div>
                 <div class="col-md-12">
                   <div class="row ">
-                  <div class="col-md-3 pull-right">
-                      <!-- Date -->
-                      <div class="form-group">
-                        <label>FOLIO :</label>
-                        <div class="input-group date">
-                          <div class="input-group-addon">
-                            <i class="fa fa-hashtag"></i>
-                          </div>
-                          <input type="text" class="form-control pull-right" >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 pull-right">
-                      <!-- Date -->
-                      <div class="form-group">
-                        <label>HORA :</label>
-                        <div class="input-group date">
-                          <div class="input-group-addon">
-                            <i class="fa fa-hashtag"></i>
-                          </div>
-                          <input type="text" class="form-control pull-right" >
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3 pull-right">
-                      <!-- Folio -->
-                      <div class="form-group">
-                        <label>FECHA:</label>
-                        <div class="input-group">
-                          <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
-                          </div>
-                          <input type="text" class="form-control pull-right" id="datepicker">
-                        </div>
-                      </div>
-                    </div>
+                  
+				   <div class="col-md-2 pull-right">
+                                    <!-- Date -->
+                                    <div class="form-group">
+                                        <label>FOLIO:</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-hashtag"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 pull-right">
+                                    <!-- Date -->
+                                    <div class="form-group">
+                                        <label>HORA:</label>
+                                        <div class="input-group clockpicker">
+                                            <div class="input-group-addon">
+                                                <i class="glyphicon glyphicon-time"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pull-right">
+                                    <!-- Folio -->
+                                    <div class="form-group">
+                                        <label>FECHA:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+					
                   </div>
                 </div>
                
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label>ORGANIZADOR</label>
+                      <label>RESPONSABLE U ORGANIZADOR</label>
                         <select class="form-control">
-                          <option>Seleccionar dependencia</option>
+                          <option>Gobierno Federal</option>
+						  <option>Gobierno Estatal</option>
+                          <option>Gobierno Municipal</option>
+						  <option>ONG</option>
+						  <option>CDE PRI</option>
+						  <option>CEN PRI</option>
                         </select>
                     </div>
                   </div>
@@ -97,7 +105,18 @@
                           <option>Seleccionar enlace</option>
                         </select>
                     </div>
-                  </div>                  
+                  </div>
+				  
+				  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>DEPENDENCIA MUNICIPAL</label>
+                        <select class="form-control">
+                          <option>Seleccionar enlace</option>
+                        </select>
+                    </div>
+                  </div>    
+				  
+				  
                 </div>  <!-- /.row -->
 
                 <div class="row">
@@ -110,9 +129,8 @@
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>CARGO</label>
-                        <select class="form-control">
-                          <option>Seleccionar responsable</option>
-                        </select>
+                      	 <input type="text" class="form-control"> 
+
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -138,9 +156,8 @@
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>CARGO</label>
-                        <select class="form-control">
-                          <option>Seleccionar responsable</option>
-                        </select>
+					  <input type="text" class="form-control"> 
+                       
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -226,28 +243,21 @@
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>ENLACE</label>
-                        <select name="Datos[selectEnlace]" class="form-control">
-                          <option>Seleccionar enlace</option>
-                          <option>Octavio Domiguez Ayala</option>
-                        </select>
+					   <input type="text" name="Datos[selectEnlace]" class="form-control"> 
+                     
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>TELEFONO</label>
-                        <select name="Datos[selectTelefono]" class="form-control">
-                          <option>Seleccionar telefono</option>
-                          <option>7233456789</option>
-                        </select>
+					    <input type="text" name="Datos[selectTelefono]" class="form-control"> 
+                      
                     </div>
                   </div>
                   <div class="col-md-3">
                     <div class="form-group">
                       <label>EMAIL</label>
-                        <select name="Datos[selectEmail]" class="form-control">
-                          <option>Seleccionar email</option>
-                          <option>prueba@outlook.com</option>
-                        </select>
+					  <input type="text" name="Datos[selectEmail]" class="form-control">                       
                     </div>
                   </div>
                   
