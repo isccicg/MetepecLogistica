@@ -9,7 +9,7 @@ function agregarPresidium()
 	radioRepAsistio = $('[name="Datos[btnRadioAsistenciaRep]"]:checked').val();
 	if(validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio))
 	{
-		$("<tr><td>"+nombreTitular+"</td><td>"+cargoTitular+"</td><td>"+radioTitularAsistio+"</td><td>"+nombreRep+"</td><td>"+cargoRep+"</td><td>"+radioRepAsistio+"</td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaPresidium(this)' value='X'></td></tr>").appendTo("#filaTbodyPresidium");
+		$("<tr><td>"+nombreTitular+"<input type='hidden' name='Datos[][nombreTitular]' value='"+nombreTitular+"'></td><td>"+cargoTitular+"<input type='hidden' name='Datos[][cargoTitular]' value='"+cargoTitular+"'></td><td>"+radioTitularAsistio+"<input type='hidden' name='Datos[][radioAsistenciaTitular]' value='"+radioTitularAsistio+"'></td><td>"+nombreRep+"<input type='hidden' name='Datos[][nombreRepresentante]' value='"+nombreRep+"'></td><td>"+cargoRep+"<input type='hidden' name='Datos[][cargoRepresentante]' value='"+cargoRep+"'></td><td>"+radioRepAsistio+"<input type='hidden' name='Datos[][radioAsistenciaRep]' value='"+radioRepAsistio+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaPresidium(this)' value='X'></td></tr>").appendTo("#filaTbodyPresidium");
 		$("#btnPreContinuar").prop("disabled",false);
 	}
 	else
@@ -42,7 +42,7 @@ function agregarInvEsp()
 	cargo = $('[name="Datos[cargoIe]"]').val();
 	if(nombre != "" && cargo != "")
 	{
-		$("<tr><td>"+nombre+"</td><td>"+cargo+"</td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaInvEsp(this)' value='X'></td></tr>").appendTo("#filaTbodyInvEsp");
+		$("<tr><td>"+nombre+"<input type='hidden' name='Datos[][nombreIe]' value='"+nombre+"'></td><td>"+cargo+"<input type='hidden' name='Datos[][cargoIe]' value='"+cargo+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaInvEsp(this)' value='X'></td></tr>").appendTo("#filaTbodyInvEsp");
 		$("#btnIeContinuar").prop("disabled",false);
 	}
 	else
@@ -95,4 +95,17 @@ $('.clockpicker').clockpicker(
 	donetext: 'Agregar hora',
 	autoclose: true,
 	default: 'now'
+});
+$("#btnAgregarActividad").click(function()
+{
+	$('<div class="row"><div class="col-md-11"><div class="form-group"><input type="text" name="Datos[][actividad]" class="form-control"></div></div><div class="col-md-1"><div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".odactividad");
+});
+function eliminarFilaActividad(fila)
+{
+	var fila = fila.closest(".row")
+	fila.remove();
+}
+$("#btnEnviar").click(function()
+{
+	$("#frmDatosGira").submit();
 });

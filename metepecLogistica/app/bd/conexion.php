@@ -8,7 +8,7 @@
 			$servidor = "localhost";
 			$usuario = "root";
 			$contrasena = "";
-			$bd = "eds";
+			$bd = "logistica";
 			$conexion = mysql_connect($servidor,$usuario,$contrasena)or die("Problemas con el servidor de BD. ");
 			mysql_select_db($bd,$conexion)or die("Problema al conectar con la BD.");
 			mysql_query("set names 'utf8'",$conexion);
