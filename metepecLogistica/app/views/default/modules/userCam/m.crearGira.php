@@ -1,3 +1,4 @@
+<body onload="dependenciasM(); delegaciones();"></body>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -17,6 +18,7 @@
     <section class="content">
         <div class="row">
             <!-- left column -->
+            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-primary">
@@ -27,7 +29,6 @@
                     <!-- form start -->
                     
                     <div class="box-body">
-                        <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
                             <div class="col-md-12">
                                 <div class="pull-right">
                                     <div class="form-group">
@@ -115,7 +116,7 @@
     							  <div class="col-md-3">
                                     <div class="form-group">
                                         <label>DELEGACION</label>
-                                        <select name="Datos[delegacion]" class="form-control">
+                                        <select name="Datos[delegacion]" class="form-control" id="delegaciones">
                                             <option>Seleccionar enlace</option>
                                         </select>
                                     </div>
@@ -155,13 +156,12 @@
             				    <div class="col-md-4">
                                     <div class="form-group">
                                         <label>DEPENDENCIA MUNICIPAL</label>
-                                        <select name="Datos[dependenciaMunicipal]" class="form-control">
+                                        <select name="Datos[dependenciaMunicipal]" class="form-control" id="dependenciaMunicipal">
                                           <option>Seleccionar enlace</option>
                                         </select>
                                     </div>
                                 </div>    
     						</div>
-                        </form>
                     </div><!-- /.box-body -->
                 </div>
                 <!-- /.box -->
@@ -254,7 +254,6 @@
                                 <div class="box-body">
                                     <div class="col-md-12">
                                         <div class="col-lg-12 col-xs-12 table-responsive">
-                                            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
                                                 <table class="table table-hover table-bordered table-condensed text-center">
                                                     <thead>
                                                     <th>NOMBRE DEL TITULAR</th>
@@ -268,7 +267,6 @@
                                                     <tbody id="filaTbodyPresidium">
                                                     </tbody>
                                                 </table>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +318,6 @@
                                 <div class="box-body">
                                     <div class="col-md-12">
                                         <div class="col-lg-12 col-xs-12 table-responsive">
-                                            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
                                                 <table class="table table-hover table-bordered table-condensed text-center">
                                                     <thead>
                                                     <th>NOMBRE</th>
@@ -330,7 +327,6 @@
                                                     <tbody id="filaTbodyInvEsp">
                                                     </tbody>
                                                 </table>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -353,7 +349,6 @@
                                 <div class="box-body">
 
                                     <div class="row">
-                                        <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>ASISTIÓ</label>
@@ -386,7 +381,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
@@ -405,7 +399,6 @@
                                 <div class="box-body">
                                     <div class="row"> 
 									    <div class="col-md-12">
-                                            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
     											<ul class="todo-list">
     											    <li>
     													<!-- drag handle -->
@@ -530,7 +523,6 @@
                                                     </li>
     														
     											</ul>
-                                            </form>							
                                         </div><!-- /.box -->
                                     </div> <!-- /.row -->
 
@@ -549,7 +541,6 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                    <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
                                         <div class="col-md-12 odactividad">
                                             <div class="row">
                                                 <div class="col-md-11">
@@ -560,7 +551,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-1">
@@ -578,7 +568,7 @@
                 </div> <!-- /tabs -->
 
             </div>
-
+            </form>
         </div>
         <!-- /.row -->
     </section>

@@ -109,3 +109,43 @@ $("#btnEnviar").click(function()
 {
 	$("#frmDatosGira").submit();
 });
+function delegaciones()
+{
+	var opciones = "";
+	$.ajax(
+	{
+		url:'app/controller/crudaltagira.php?accion=delegaciones',
+        dataType: "json",
+        success:  function (data) 
+        {
+        	if($.isArray(data))
+        	{
+				for (var i = 0; i < data.length; i++) 
+				{
+					opciones = opciones + "<option value='"+data[i].id+"'>"+data[i].delegacion+"</option>";
+				}
+			}
+			$("#delegaciones").html(opciones);
+        }
+	});
+}
+function dependenciasM()
+{
+	var opciones = "";
+	$.ajax(
+	{
+		url:'app/controller/crudaltagira.php?accion=dependenciasM',
+        dataType: "json",
+        success:  function (data) 
+        {
+        	if($.isArray(data))
+        	{
+				for (var i = 0; i < data.length; i++) 
+				{
+					opciones = opciones + "<option value='"+data[i].id+"'>"+data[i].dependencia+"</option>";
+				}
+			}
+			$("#dependenciaMunicipal").html(opciones);
+        }
+	});
+}
