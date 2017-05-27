@@ -3,6 +3,9 @@ if(isset($_GET["accion"]))
 {
 	switch($_GET["accion"])
 	{
+		case 'datosAltaGira':
+			print_r($_POST["Datos"]);
+			break;
 		case 'dependenciasM':
 			require_once("../model/gira.php");
 			$gira = new gira();

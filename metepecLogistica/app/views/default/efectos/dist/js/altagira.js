@@ -1,15 +1,23 @@
+$(function () 
+{
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+ });
 function agregarPresidium()
 {
 	var nombreTitular = "",cargoTitular = "",radioTitularAsistio = "",nombreRep = "",cargoRep = "",radioRepAsistio = "";
-	nombreTitular = $('[name="Datos[nombreTitular]"]').val();
-	cargoTitular = $('[name="Datos[cargoTitular]"]').val();
-	radioTitularAsistio = $('[name="Datos[btnRadioAsistenciaTitular]"]:checked').val();
-	nombreRep = $('[name="Datos[nombreRepresentante]"]').val();
-	cargoRep = $('[name="Datos[cargoRepresentante]"]').val();
-	radioRepAsistio = $('[name="Datos[btnRadioAsistenciaRep]"]:checked').val();
+	nombreTitular = $('#nombreTitular').val();
+	cargoTitular = $('#cargoTitular').val();
+	radioTitularAsistio = $('.radioAsistioTitular:checked').val();
+	nombreRep = $('#nombreRepresentante').val();
+	cargoRep = $('#cargoRepresentante').val();
+	radioRepAsistio = $('.radioAsistenciaRep:checked').val();
 	if(validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio))
 	{
-		$("<tr><td>"+nombreTitular+"<input type='hidden' name='Datos[][nombreTitular]' value='"+nombreTitular+"'></td><td>"+cargoTitular+"<input type='hidden' name='Datos[][cargoTitular]' value='"+cargoTitular+"'></td><td>"+radioTitularAsistio+"<input type='hidden' name='Datos[][radioAsistenciaTitular]' value='"+radioTitularAsistio+"'></td><td>"+nombreRep+"<input type='hidden' name='Datos[][nombreRepresentante]' value='"+nombreRep+"'></td><td>"+cargoRep+"<input type='hidden' name='Datos[][cargoRepresentante]' value='"+cargoRep+"'></td><td>"+radioRepAsistio+"<input type='hidden' name='Datos[][radioAsistenciaRep]' value='"+radioRepAsistio+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaPresidium(this)' value='X'></td></tr>").appendTo("#filaTbodyPresidium");
+		$("<tr><td>"+nombreTitular+"<input type='hidden' name='Datos[nombreTitular][]' value='"+nombreTitular+"'></td><td>"+cargoTitular+"<input type='hidden' name='Datos[cargoTitular][]' value='"+cargoTitular+"'></td><td>"+radioTitularAsistio+"<input type='hidden' name='Datos[radioAsistenciaTitular][]' value='"+radioTitularAsistio+"'></td><td>"+nombreRep+"<input type='hidden' name='Datos[nombreRepresentante][]' value='"+nombreRep+"'></td><td>"+cargoRep+"<input type='hidden' name='Datos[cargoRepresentante][]' value='"+cargoRep+"'></td><td>"+radioRepAsistio+"<input type='hidden' name='Datos[radioAsistenciaRep][]' value='"+radioRepAsistio+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaPresidium(this)' value='X'></td></tr>").appendTo("#filaTbodyPresidium");
 		$("#btnPreContinuar").prop("disabled",false);
 	}
 	else
@@ -38,11 +46,11 @@ $("#btnPreContinuar").click(function()
 function agregarInvEsp()
 {
 	var nombre = "", cargo = "";
-	nombre = $('[name="Datos[nombreIe]"]').val();
-	cargo = $('[name="Datos[cargoIe]"]').val();
+	nombre = $('#nombreIe').val();
+	cargo = $('#cargoIe').val();
 	if(nombre != "" && cargo != "")
 	{
-		$("<tr><td>"+nombre+"<input type='hidden' name='Datos[][nombreIe]' value='"+nombre+"'></td><td>"+cargo+"<input type='hidden' name='Datos[][cargoIe]' value='"+cargo+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaInvEsp(this)' value='X'></td></tr>").appendTo("#filaTbodyInvEsp");
+		$("<tr><td>"+nombre+"<input type='hidden' name='Datos[nombreIe][]' value='"+nombre+"'></td><td>"+cargo+"<input type='hidden' name='Datos[cargoIe][]' value='"+cargo+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaInvEsp(this)' value='X'></td></tr>").appendTo("#filaTbodyInvEsp");
 		$("#btnIeContinuar").prop("disabled",false);
 	}
 	else
@@ -60,7 +68,7 @@ function eliminarFilaInvEsp(fila)
 	if($("#filaTbodyInvEsp tr").length == 0)
 		$("#btnIeContinuar").prop("disabled",true);
 }
-$('[name="Datos[btnRadioAsistenciaPm]"]').click(function()
+$(document).on("click",".radioAsistenciaPm", function()
 {
 	var valueRadio = $(this).val();
 	switch(valueRadio)
@@ -77,14 +85,14 @@ $("#btnPmContinuar").click(function()
 	$("#ic").removeClass("disabledTab");
 	$(".nav-tabs li:eq(1) a").tab('show');
 });
-$(".checkboxIc").click(function()
+$(document).on("click",".checkboxIc",function()
 {
 	numCheckBox = $('.todo-list input:checkbox:checked').length;
 	if(numCheckBox > 0)
 		$("#btnIcContinuar").prop("disabled",false);
 	else
 		$("#btnIcContinuar").prop("disabled",true);
-})
+});
 $("#btnIcContinuar").click(function()
 {
 	$("#od").removeClass("disabledTab");
@@ -98,20 +106,20 @@ $('.clockpicker').clockpicker(
 });
 $("#btnAgregarActividad").click(function()
 {
-	$('<div class="row"><div class="col-md-11"><div class="form-group"><input type="text" name="Datos[][actividad]" class="form-control"></div></div><div class="col-md-1"><div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".odactividad");
+	$('<div class="row"><div class="col-md-11"><div class="form-group"><input type="text" name="Datos[actividad][]" class="form-control"></div></div><div class="col-md-1"><div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".odactividad");
 });
 function eliminarFilaActividad(fila)
 {
 	var fila = fila.closest(".row")
 	fila.remove();
 }
-$("#btnEnviar").click(function()
-{
-	$("#frmDatosGira").submit();
-});
+// $("#btnEnviar").click(function()
+// {
+// 	$("#frmDatosGira").submit();
+// });
 function delegaciones()
 {
-	var opciones = "";
+	var opciones = "<option value=''>--- Seleccionar delegación ---</option>";
 	$.ajax(
 	{
 		url:'app/controller/crudaltagira.php?accion=delegaciones',
@@ -131,7 +139,7 @@ function delegaciones()
 }
 function dependenciasM()
 {
-	var opciones = "";
+	var opciones = "<option value=''>--- Seleccionar dependencia municipal ---</option>";
 	$.ajax(
 	{
 		url:'app/controller/crudaltagira.php?accion=dependenciasM',

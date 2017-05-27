@@ -18,7 +18,7 @@
     <section class="content">
         <div class="row">
             <!-- left column -->
-            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php">
+            <form id="frmDatosGira" method="POST" action="app/controller/crudaltagira.php?accion=datosAltaGira">
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-primary">
@@ -54,7 +54,7 @@
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-hashtag"></i>
                                                 </div>
-                                                <input type="text" name="Datos[folio]" class="form-control pull-right" >
+                                                <input type="text" name="Datos[folio]" class="form-control pull-right" disabled="">
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </div>
-                                                <input type="text" name="Datos[fecha]" class="form-control pull-right" id="datepicker">
+                                                <input type="text" name="Datos[fecha]" class="form-control pull-right" id="datepicker" required>
                                             </div>
                                         </div>
                                     </div>
@@ -90,13 +90,13 @@
                                 <div class="col-md-10">
                                     <div class="form-group">
                                         <label>NOMBRE DEL EVENTO</label>
-                                        <input type="text" name="Datos[nombreEvento]" class="form-control">
+                                        <input type="text" name="Datos[nombreEvento]" class="form-control" required>
                                     </div>
                                 </div>
     							<div class="col-md-2">
                                     <div class="form-group">
                                         <label>NUMERO ASISTENTES</label>
-                                        <input type="text" name="Datos[numAsistentes]" class="form-control">
+                                        <input type="text" name="Datos[numAsistentes]" class="form-control" required>
                                     </div>
                                 </div>
                             </div>  <!-- /.row -->
@@ -104,27 +104,26 @@
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <label>DOMICILIO</label>
-                                        <input type="text" name="Datos[domicilio]" class="form-control">
+                                        <input type="text" name="Datos[domicilio]" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>COLONIA</label>
-                                        <input type="text" name="Datos[colonia]" class="form-control">
+                                        <input type="text" name="Datos[colonia]" class="form-control" required>
                                     </div>
                                 </div>
     							  <div class="col-md-3">
                                     <div class="form-group">
                                         <label>DELEGACION</label>
-                                        <select name="Datos[delegacion]" class="form-control" id="delegaciones">
-                                            <option>Seleccionar enlace</option>
+                                        <select name="Datos[delegacion]" class="form-control" id="delegaciones" required>
                                         </select>
                                     </div>
                                 </div>
     							 <div class="col-md-1">
                                     <div class="form-group">
                                         <label>SECCION</label>
-                                        <input type="text" name="Datos[seccion]" class="form-control">
+                                        <input type="text" name="Datos[seccion]" class="form-control" required>
                                     </div>
                                 </div>
                             </div>  <!-- /.row -->
@@ -134,7 +133,8 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                       <label>RESPONSABLE U ORGANIZADOR</label>
-                                        <select name="Datos[responsable]" class="form-control">
+                                        <select name="Datos[responsable]" class="form-control" required>
+                                            <option value="">---Seleccionar responsable u organizador---</option>
                                           <option>Gobierno Federal</option>
                 						  <option>Gobierno Estatal</option>
                                           <option>Gobierno Municipal</option>
@@ -146,18 +146,15 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                    <label>DEPENDENCIA</label>
-                                        <select name="Datos[dependencia]" class="form-control">
-                                          <option>Seleccionar enlace</option>
-                                        </select>
+                                        <label>DEPENDENCIA</label>
+                                        <input type="text" name="Datos[dependencia]" class="form-control" required>
                                     </div>
                                 </div>
     				  
             				    <div class="col-md-4">
                                     <div class="form-group">
                                         <label>DEPENDENCIA MUNICIPAL</label>
-                                        <select name="Datos[dependenciaMunicipal]" class="form-control" id="dependenciaMunicipal">
-                                          <option>Seleccionar enlace</option>
+                                        <select name="Datos[dependenciaMunicipal]" class="form-control" id="dependenciaMunicipal" required>
                                         </select>
                                     </div>
                                 </div>    
@@ -189,13 +186,13 @@
 									     <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>NOMBRE DEL TITULAR </label>
-                                                <input type="text" name="Datos[nombreTitular]" class="form-control">
+                                                <input type="text" class="form-control" id="nombreTitular">
                                             </div>
                                         </div>
 									    <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>CARGO</label>
-                                                <input type="text" name="Datos[cargoTitular]" class="form-control">
+                                                <input type="text" class="form-control" id="cargoTitular">
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -203,10 +200,10 @@
                                                 <label>ASISTIÓ</label>
                                                 <div class="input-group">
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistenciaTitular]" value="SI">SI
+                                                        <input type="radio" name="btnRadioAsistenciaTitular" value="SI" class="radioAsistioTitular">SI
                                                     </label>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistenciaTitular]" value="NO">NO
+                                                        <input type="radio" name="btnRadioAsistenciaTitular" value="NO" class="radioAsistioTitular">NO
                                                     </label>
                                                 </div>
                                             </div>
@@ -217,13 +214,13 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>NOMBRE DEL REPRESENTANTE</label>
-                                                <input type="text" name="Datos[nombreRepresentante]" class="form-control">
+                                                <input type="text" class="form-control" id="nombreRepresentante">
                                             </div>
                                         </div>
 										 <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>CARGO</label>
-                                                <input type="text" name="Datos[cargoRepresentante]" class="form-control">
+                                                <input type="text" class="form-control" id="cargoRepresentante">
                                             </div>
                                         </div>
 										 <div class="col-md-2">
@@ -231,10 +228,10 @@
                                                 <label>ASISTIÓ</label>
                                                 <div class="input-group">
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistenciaRep]" value="SI">SI
+                                                        <input type="radio" name="btnRadioAsistenciaRep" value="SI" class="radioAsistenciaRep">SI
                                                     </label>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="Datos[btnRadioAsistenciaRep]" value="NO">NO
+                                                        <input type="radio" name="btnRadioAsistenciaRep" value="NO" class="radioAsistenciaRep">NO
                                                     </label>
                                                 </div>
                                             </div>
@@ -243,7 +240,7 @@
                                 </div><!-- /.box-body -->
 
                                 <div class="box-footer">
-                                    <button onclick="agregarPresidium()" class="btn btn-success pull-right">Agregar</button>
+                                    <input type="button" onclick="agregarPresidium()" value="Agregar" class="btn btn-success pull-right">
                                 </div>
                             </div><!-- /.box -->
 
@@ -272,7 +269,7 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-									    <button onclick="" class="btn btn-success pull-right" id="btnPreContinuar" disabled="true">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
+									    <button type="button" class="btn btn-success pull-right" id="btnPreContinuar" disabled="true">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +288,7 @@
                                             <div class="form-group">
                                                 <div class="form-group">
                                                 <label>NOMBRE</label>
-                                                <input type="text" name="Datos[nombreIe]" class="form-control">
+                                                <input type="text" class="form-control" id="nombreIe">
                                             </div>
                                             </div>
                                         </div>
@@ -299,7 +296,7 @@
                                             <div class="form-group">
                                                <div class="form-group">
                                                 <label>CARGO</label>
-                                                <input type="text" name="Datos[cargoIe]" class="form-control">
+                                                <input type="text" class="form-control" id="cargoIe">
                                             </div>
                                             </div>
                                         </div>   
@@ -307,7 +304,7 @@
                                    
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <button onclick="agregarInvEsp()" class="btn btn-success pull-right">Agregar</button>
+                                    <button type="button" onclick="agregarInvEsp()" class="btn btn-success pull-right">Agregar</button>
                                 </div>
                             </div><!-- /.box-primary -->
 
@@ -332,7 +329,7 @@
                                 </div>
                                 <div class="box-footer">
                                     <div class="pull-right">
-									  <button onclick="" class="btn btn-success pull-right" disabled="true" id="btnIeContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
+									  <button type="button" class="btn btn-success pull-right" disabled="true" id="btnIeContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
 
                                     </div>
                                 </div>
@@ -354,10 +351,10 @@
                                                     <label>ASISTIÓ</label>
                                                     <div class="input-group">
                                                         <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="SI">SI
+                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="SI" class="radioAsistenciaPm">SI
                                                         </label>
                                                         <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="NO">NO
+                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="NO" class="radioAsistenciaPm">NO
                                                         </label>
                                                     </div>
                                                 </div>
@@ -384,7 +381,7 @@
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <button class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
+                                    <button type="button" class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
                                 </div>
                             </div><!-- /.box -->
 
@@ -406,7 +403,7 @@
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" value="R1" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R1" class="checkboxIc">
         												<span class="text">R1</span>						
     												</li>
     												<li>
@@ -414,7 +411,7 @@
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" value="R2" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R2" class="checkboxIc">
     												    <span class="text">R2</span>
     												</li>
     												<li>
@@ -422,7 +419,7 @@
     													    <i class="fa fa-ellipsis-v"></i>
     													    <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    													<input type="checkbox" value="R3" class="checkboxIc">
+    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
     													<span class="text">R3</span>
     												</li>
     												<li>
@@ -430,7 +427,7 @@
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" value="R4" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R4" class="checkboxIc">
     												    <span class="text">R4</span>
     											    </li>
                                                     <li>
@@ -438,7 +435,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R5" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R5" class="checkboxIc">
                                                         <span class="text">R5</span>
                                                     </li>
                                                     <li>
@@ -446,7 +443,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R6" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R6" class="checkboxIc">
                                                         <span class="text">R6</span>
                                                     </li>
                                                     <li>
@@ -454,7 +451,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R7" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R7" class="checkboxIc">
                                                         <span class="text">R7</span>
                                                     </li>
                                                     <li>
@@ -462,7 +459,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R8" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R8" class="checkboxIc">
                                                         <span class="text">R8</span>
                                                     </li>
                                                     <li>
@@ -470,7 +467,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R9" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R9" class="checkboxIc">
                                                         <span class="text">R9</span>
                                                     </li>
                                                     <li>
@@ -478,7 +475,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R10" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R10" class="checkboxIc">
                                                         <span class="text">R10</span>
                                                     </li>
                                                     <li>
@@ -486,7 +483,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R11" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R11" class="checkboxIc">
                                                         <span class="text">R11</span>
                                                     </li>
                                                     <li>
@@ -494,7 +491,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R12" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R12" class="checkboxIc">
                                                         <span class="text">R12</span>
                                                     </li>
                                                     <li>
@@ -502,7 +499,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R13" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R13" class="checkboxIc">
                                                         <span class="text">R13</span>
                                                     </li>
                                                     <li>
@@ -510,7 +507,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R14" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R14" class="checkboxIc">
                                                         <span class="text">R14</span>
                                                     </li>
                                                     <li>
@@ -518,7 +515,7 @@
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" value="R15" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R15" class="checkboxIc">
                                                         <span class="text">R15</span>
                                                     </li>
     														
@@ -529,7 +526,7 @@
                                     
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <button onclick="" class="btn btn-success pull-right" disabled="true" id="btnIcContinuar">Continuar
+                                    <button type="button" class="btn btn-success pull-right" disabled="true" id="btnIcContinuar">Continuar
                                     <span class="glyphicon glyphicon-arrow-right"></span></button>
                                 </div>
                             </div><!-- /.box -->
@@ -554,13 +551,13 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-1">
-                                                <button class="btn btn-success btn-sm" id="btnAgregarActividad">Agregar</button>
+                                                <button type="button" class="btn btn-success btn-sm" id="btnAgregarActividad">Agregar</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <input type="submit" class="btn btn-primary pull-right" value="Enviar" id="btnEnviar">
+                                    <button type="submit" class="btn btn-primary pull-right">Enviar</button>
                                 </div>
                             </div><!-- /.box -->
                         </div>
