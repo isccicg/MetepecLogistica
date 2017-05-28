@@ -67,7 +67,11 @@
 	}
 
 
-	
+	else 	if( $_GET['action'] == 'login' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$mvc->login();	
+			//echo "entre";
+	}	
 	else{ 
 
         $mvc->index();   /*menu principal todas las funciones*/

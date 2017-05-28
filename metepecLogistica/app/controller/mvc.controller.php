@@ -12,7 +12,16 @@ class mvc_controller {
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);
 	
 		$this->view_page($pagina);
-   } 
+   }
+
+    function login()
+   {
+		$pagina=$this->load_template2('');	/*titulo de la pagina */			
+		$html = $this->load_page('app/views/default/modules/m.login.php');
+		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);
+	
+		$this->view_page($pagina);
+   }  
 
 
 
@@ -31,6 +40,22 @@ class mvc_controller {
 		$footer = $this->load_page('app/views/default/sections/s.footer.php');
 		$menu = $this->load_page('app/views/default/sections/s.menu.php');
 		$pagina = $this->replace_menuAdm('/\#MENU\#/ms' ,$menu , $pagina);
+		$pagina = $this->replace_content('/\#HEAD\#/ms' ,$head , $pagina);
+		$pagina = $this->replace_content('/\#FOOT\#/ms',$foot , $pagina);
+		$pagina = $this->replace_content('/\#FOOTER\#/ms',$footer , $pagina);
+		$pagina = $this->replace_content('/\#TITLE\#/ms' ,$title , $pagina);
+	
+		return $pagina;
+	}
+
+
+
+	function load_template2($title='Sin Titulo'){
+		$pagina = $this->load_page('app/views/default/pageL.php');
+		$head = $this->load_page('app/views/default/sections/s.head.php');		
+		$foot = $this->load_page('app/views/default/sections/s.foot.php');
+		$footer = $this->load_page('app/views/default/sections/s.footer.php');
+		
 		$pagina = $this->replace_content('/\#HEAD\#/ms' ,$head , $pagina);
 		$pagina = $this->replace_content('/\#FOOT\#/ms',$foot , $pagina);
 		$pagina = $this->replace_content('/\#FOOTER\#/ms',$footer , $pagina);
