@@ -543,7 +543,7 @@
                                                 <div class="col-md-11">
                                                     <div class="form-group">
                                                         <label>ACTIVIDAD :</label>
-                                                        <input type="text" name="Datos[][actividad]" class="form-control">
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
