@@ -1,8 +1,16 @@
 <?php
-
 /*require 'app/model/universitario.class.php';*/
+require_once('app/bd/conexion.php');
+class mvc_controllerUserCam { 
 
-class mvc_controllerUserCam {  
+	protected $acceso;
+	protected $conexion;
+
+	public function __construct() 
+	{
+		$this->acceso = new accesoDB(); 
+	 	$this->conexion = $this->acceso->conDB();
+	} 
 	
 
   function index()
@@ -47,11 +55,47 @@ class mvc_controllerUserCam {
    }
    function historialGira()
    {
-		$pagina=$this->load_template('');	/*titulo de la pagina */			
+
+		$pagina=$this->load_template('');	/*titulo de la pagina */	
+    
+       
+
 		$html = $this->load_page('app/views/default/modules/userCam/m.historialGira.php');
+
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
+
+		$historial = $this->datosGiraTabla();
+
+
+		$pagina = $this->replace_historial('/\#HISTORIAL\#/ms' ,$historial , $pagina);	
+
 		$this->view_page($pagina);
+
    }
+   public function datosGiraTabla()
+	{
+		$datosGira = array();
+		$consulta = "SELECT * FROM gira";
+		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
+		if($resultado)
+		{
+			while($filaTmp = mysql_fetch_assoc($resultado))
+				$datosGira[] = $filaTmp;
+		}
+		else
+			$datosDependencia = $this->conexion->errno . " : " . $this->conexion->error . "\n";
+		if(is_array($datosGira))
+		{
+			foreach ($datosGira as $datosGira) 
+			{
+				
+				$tabla .= "<tr><td>".$datosGira["fecha"]."</td><td>".$datosGira["hora"]."</td><td>".$datosGira["nombre_evento"]."</td><td>".$datosGira["domicilio"]."</td></tr>";
+
+			}
+		}
+
+		return $tabla;
+	}
    function historialPregira()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
@@ -131,6 +175,13 @@ class mvc_controllerUserCam {
 	{
 		 return preg_replace($in, $out, $pagina);	 	
 	}
+
+
+	private function replace_historial($in='/\#HISTORIAL\#/ms', $out,$pagina)
+	{
+		 return preg_replace($in, $out, $pagina);	 	
+	}
+
 
 	
 	
