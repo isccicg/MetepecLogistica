@@ -166,10 +166,10 @@
                 <!-- Tabs datos particulares -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs pull-right">
-                        <li class="disabledTab" id="od"><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
-                        <li class="disabledTab" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>
-                        <li class="disabledTab" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
-                        <li class="disabledTab" id="ie"><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
+                        <li class="" id="od"><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
+                        <li class="" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>
+                        <li class="" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
+                        <li class="" id="ie"><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
                         <li class="active"><a href="#presidium" data-toggle="tab">Presidium</a></li>
                     </ul>
                     <div class="tab-content no-padding">  
