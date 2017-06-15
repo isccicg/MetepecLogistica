@@ -166,11 +166,12 @@
                 <!-- Tabs datos particulares -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs pull-right">
+					    <li class="" id="pm"><a href="#beneficiarios" data-toggle="tab">Beneficirios</a></li>
                         <li class="" id="od"><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
-                        <li class="" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>
-                        <li class="" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
+                        <li class="" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>                    
                         <li class="" id="ie"><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
                         <li class="active"><a href="#presidium" data-toggle="tab">Presidium</a></li>
+						<li class="" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
                     </ul>
                     <div class="tab-content no-padding">  
                         <div class="chart tab-pane active" id="presidium">
@@ -395,7 +396,7 @@
                                 <!-- form start -->
                                 <div class="box-body">
                                     <div class="row"> 
-									    <div class="col-md-12">
+									    <div class="col-md-4">
     											<ul class="todo-list">
     											    <li>
     													<!-- drag handle -->
@@ -437,90 +438,86 @@
                                                         </span>
                                                         <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R5" class="checkboxIc">
                                                         <span class="text">R5</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R6" class="checkboxIc">
-                                                        <span class="text">R6</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R7" class="checkboxIc">
-                                                        <span class="text">R7</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R8" class="checkboxIc">
-                                                        <span class="text">R8</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R9" class="checkboxIc">
-                                                        <span class="text">R9</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R10" class="checkboxIc">
-                                                        <span class="text">R10</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R11" class="checkboxIc">
-                                                        <span class="text">R11</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R12" class="checkboxIc">
-                                                        <span class="text">R12</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R13" class="checkboxIc">
-                                                        <span class="text">R13</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R14" class="checkboxIc">
-                                                        <span class="text">R14</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="handle">
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                           <i class="fa fa-ellipsis-v"></i>
-                                                        </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R15" class="checkboxIc">
-                                                        <span class="text">R15</span>
-                                                    </li>
-    														
+                                                    </li>	
     											</ul>
                                         </div><!-- /.box -->
+										<div class="col-md-4">
+    											<ul class="todo-list">
+    											    <li>
+    													<!-- drag handle -->
+    												    <span class="handle">
+    													   <i class="fa fa-ellipsis-v"></i>
+    													   <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R1" class="checkboxIc">
+        												<span class="text">R6</span>						
+    												</li>
+    												<li>
+    												    <span class="handle">
+    													   <i class="fa fa-ellipsis-v"></i>
+    													   <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R2" class="checkboxIc">
+    												    <span class="text">R7</span>
+    												</li>
+    												<li>
+    												    <span class="handle">
+    													    <i class="fa fa-ellipsis-v"></i>
+    													    <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
+    													<span class="text">R8</span>
+    												</li>
+    												<li>
+    												    <span class="handle">
+    													   <i class="fa fa-ellipsis-v"></i>
+    													   <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R4" class="checkboxIc">
+    												    <span class="text">R9</span>
+    											    </li>
+                                                    <li>
+                                                        <span class="handle">
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                        </span>
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R5" class="checkboxIc">
+                                                        <span class="text">R10</span>
+                                                    </li>	
+    											</ul>
+                                        </div><!-- /.box -->
+										<div class="col-md-4">
+    											<ul class="todo-list">
+    											    <li>
+    													<!-- drag handle -->
+    												    <span class="handle">
+    													   <i class="fa fa-ellipsis-v"></i>
+    													   <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R1" class="checkboxIc">
+        												<span class="text">R11</span>						
+    												</li>
+    												<li>
+    												    <span class="handle">
+    													   <i class="fa fa-ellipsis-v"></i>
+    													   <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R2" class="checkboxIc">
+    												    <span class="text">R12</span>
+    												</li>
+    												<li>
+    												    <span class="handle">
+    													    <i class="fa fa-ellipsis-v"></i>
+    													    <i class="fa fa-ellipsis-v"></i>
+    												    </span>
+    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
+    													<span class="text">R13</span>
+    												</li>
+    												
+    											</ul>
+                                        </div><!-- /.box -->
+										
+										
                                     </div> <!-- /.row -->
 
                                     
@@ -540,9 +537,57 @@
                                 <div class="box-body">
                                         <div class="col-md-12 odactividad">
                                             <div class="row">
-                                                <div class="col-md-11">
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>HORA :</label>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
+                                                    </div>
+                                                </div>
+												<div class="col-md-8">
                                                     <div class="form-group">
                                                         <label>ACTIVIDAD :</label>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
+                                                    </div>
+                                                </div>
+												<div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>DURACION :</label>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-1">
+                                                <button type="button" class="btn btn-success btn-sm" id="btnAgregarActividad">Agregar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+                                </div>
+                            </div><!-- /.box -->
+                        </div>
+						 <div class="chart tab-pane" id="beneficiarios">
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Ingrese datos :</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                        <div class="col-md-12 odactividad">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>NOMBRE :</label>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
+                                                    </div>
+                                                </div>
+												<div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>DELEGACION :</label>
                                                         <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
