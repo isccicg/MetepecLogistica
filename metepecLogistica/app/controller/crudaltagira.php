@@ -7,8 +7,9 @@ if(isset($_GET["accion"]))
 	{
 		
 		case 'datosAltaGira':
-			print_r($_POST["Datos"]["nombreTitular"]);
-			$datosG = $gira->altaGira($_POST["Datos"]); 
+			// print_r($_POST["Datos"]);
+			$datosG = $gira->altaGira($_POST["Datos"]);
+			header('location:../../index.php?action=crearGira');
 			break;
 		case 'dependenciasM':
 			$datos = $gira->cargarDependenciasM();

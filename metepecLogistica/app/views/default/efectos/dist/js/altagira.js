@@ -94,7 +94,9 @@ $(document).on("click",".radioAsistioTitular", function()
 			$("#cargoTitular").prop("disabled",false);
 
 			$("#nombreRepresentante").prop("disabled",true);
+			$("#nombreRepresentante").val("");
 			$("#cargoRepresentante").prop("disabled",true);
+			$("#cargoRepresentante").val("");
 			$(".radioAsistenciaRep").prop("disabled",true);
 			break;
 		case'NO':
@@ -149,8 +151,11 @@ $("#btnAgregarActividad").click(function()
 });
 $("#btnAgregarBeneficiario").click(function()
 {
-	$('<div class="row"><div class="col-md-7"><div class="form-group"><input type="text" name="Datos[nombreBeneficiario][]" class="form-control"></div></div><div class="col-md-4"> <div class="form-group"><input type="text" name="Datos[delegacionBeneficiario][]" class="form-control"></div></div><div class="col-md-1"> <div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".camposBeneficiario");
-
+	$('<div class="row"><div class="col-md-7"><div class="form-group"><input type="text" name="Datos[nombreBeneficiario][]" class="form-control"></div></div><div class="col-md-4"> <div class="form-group"><select name="Datos[delegacionBeneficiario][]" class="form-control delegacionBeneficiario" required></select></div></div><div class="col-md-1"> <div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".camposBeneficiario");
+	delegaciones(function(opciones)
+	{
+		$(".delegacionBeneficiario").append(opciones);
+	});
 });
 $(document).on("keyup click",".datosOrd",function()
 {
@@ -173,7 +178,28 @@ function eliminarFilaActividad(fila)
 // {
 // 	$("#frmDatosGira").submit();
 // });
-function delegaciones()
+function objDelegaciones()
+{
+	delegaciones(function(opciones)
+	{
+		$("#delegaciones").html(opciones);
+	});
+}
+function objDependenciasM()
+{
+	dependenciasM(function(opciones)
+	{
+		$("#dependenciaMunicipal").html(opciones);
+	});
+}
+function onjDelegacionesBeneficiario()
+{
+	delegaciones(function(opciones)
+	{
+		$(".delegacionBeneficiario").html(opciones);
+	});
+}
+function delegaciones(callback)
 {
 	var opciones = "<option value=''>--- Seleccionar delegación ---</option>";
 	$.ajax(
@@ -189,11 +215,12 @@ function delegaciones()
 					opciones = opciones + "<option value='"+data[i].id+"'>"+data[i].delegacion+"</option>";
 				}
 			}
-			$("#delegaciones").html(opciones);
+			callback(opciones);
         }
 	});
+
 }
-function dependenciasM()
+function dependenciasM(callback)
 {
 	var opciones = "<option value=''>--- Seleccionar dependencia municipal ---</option>";
 	$.ajax(
@@ -209,7 +236,12 @@ function dependenciasM()
 					opciones = opciones + "<option value='"+data[i].id+"'>"+data[i].dependencia+"</option>";
 				}
 			}
-			$("#dependenciaMunicipal").html(opciones);
+			callback(opciones)
         }
 	});
 }
+$(document).on("keypress","#numAsistentes",function(e)
+{
+	if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) 
+    	return false;
+});

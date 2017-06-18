@@ -1,4 +1,4 @@
-<body onload="dependenciasM(); delegaciones();"></body>
+<body onload="objDelegaciones(); objDependenciasM(); onjDelegacionesBeneficiario();"></body>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -96,7 +96,7 @@
     							<div class="col-md-2">
                                     <div class="form-group">
                                         <label>NUMERO ASISTENTES</label>
-                                        <input type="text" name="Datos[numAsistentes]" class="form-control" required>
+                                        <input type="text" name="Datos[numAsistentes]" class="form-control" id="numAsistentes" required>
                                     </div>
                                 </div>
                             </div>  <!-- /.row -->
@@ -604,7 +604,8 @@
 												<div class="col-md-4">
                                                     <div class="form-group">
                                                         <label>DELEGACION :</label>
-                                                        <input type="text" name="Datos[delegacionBeneficiario][]" class="form-control">
+                                                        <select name="Datos[delegacionBeneficiario][]" class="form-control delegacionBeneficiario"  required>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>

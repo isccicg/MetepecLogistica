@@ -33,8 +33,25 @@ class gira
 		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
 		$giraId = mysql_fetch_assoc($resultado);
 		$giraId = $giraId["id"];
-		echo $giraId;
-		//Datos particularesdealta presidium
+		//Datos alta Presidente municipal
+		$asistenciaPreMunicipal = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["btnRadioAsistenciaPm"]))));
+		if($asistenciaPreMunicipal == "SI")
+		{
+			$asistenciaPreMunicipal = 1;
+			$nomRepresentante = "N/A";
+			$cumplioRepresentante = 0;
+		}
+		else
+		{
+			$nomRepresentante = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreRepresentantePm"]))));
+			$cumplioRepresentante = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["btnRadioCumplioPm"]))));
+		}
+		$consulta = "INSERT INTO presidente(gira_id,asistencia,nombre_representante,cumplio) VALUES ($giraId,'$asistenciaPreMunicipal','$nomRepresentante','$cumplioRepresentante')";
+		mysql_query($consulta,$this->conexion) or die (mysql_error());
+		//Fin Presidente municipal
+
+
+		//Datos alta presidium
 		for($i = 0; $i < count($datos["nombreTitular"]) ;$i++)
 		{
 			$nombreTitular = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreTitular"][$i]))));
@@ -46,6 +63,42 @@ class gira
 			$radioAsistenciaRep = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["radioAsistenciaRep"][$i]))));
 			$radioAsistenciaRep = ($radioAsistenciaRep === "SI") ? 1:0;
 			$consulta = "INSERT INTO presidium(gira_id,nombre_titular,cargo_titular,asistencia_titular,nombre_representante,cargo_representante,asistencia_representante) VALUES ($giraId,'$nombreTitular','$cargoTitular',$radioAsistenciaTitular,'$nombreRepresentante','$$cargoRepresentante',$radioAsistenciaRep);";
+			mysql_query($consulta,$this->conexion) or die (mysql_error());
+		}
+		//Fin alta presidium
+		//Datos invitados especiales
+		for($i = 0;$i < count($datos["nombreIe"]); $i++)
+		{
+			$nomInvEspecial = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreIe"][$i]))));
+			$cargoInvEspecial = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["cargoIe"][$i]))));
+			$consulta = "INSERT INTO invitados(gira_id,nombre,cargo) VALUES ($giraId,'$nomInvEspecial','$cargoInvEspecial')";
+			mysql_query($consulta,$this->conexion) or die (mysql_error());
+		}
+		//Fin invitados especiales
+		
+		for($i = 0; $i < count($datos["checkboxIntCabildo"]); $i++)//Datos integrantes de cabildo
+		{
+			$intCabildo = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["checkboxIntCabildo"][$i]))));
+			$consulta = "INSERT INTO cabildo(gira_id,regidores) VALUES ($giraId,'$intCabildo')";
+			mysql_query($consulta,$this->conexion) or die (mysql_error());
+		}
+		//Fin integrantes de cabildo
+		
+		for($i = 0;$i < count($datos["horaActividad"]); $i++)//Datos orden del dia
+		{
+			$horaActividad = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["horaActividad"][$i]))));
+			$actividad = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["actividad"][$i]))));
+			$duracionActividad = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["duracionActividad"][$i]))));
+			$consulta = "INSERT INTO orden(gira_id,hora,actividad,duracion) VALUES ($giraId,'$horaActividad','$actividad','$duracionActividad')";
+			mysql_query($consulta,$this->conexion) or die (mysql_error());
+		}
+		//Fin orden del dia
+
+		for($i = 0;$i < count($datos["nombreBeneficiario"]); $i++)//Datos beneficiarios
+		{
+			$nomBeneficiarios = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreBeneficiario"][$i]))));
+			$delegacionBeneficiario = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["delegacionBeneficiario"][$i]))));
+			$consulta = "INSERT INTO beneficiarios(gira_id,nombre,delegacion) VALUES ($giraId,'$nomBeneficiarios','$delegacionBeneficiario')";
 			mysql_query($consulta,$this->conexion) or die (mysql_error());
 		}
 	}
