@@ -23,11 +23,11 @@ class gira
 		$colonia = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["colonia"]))));
 		$delegacion = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["delegacion"]))));
 		$seccion = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["seccion"]))));
-		$responsable = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["seccion"]))));
+		$responsable = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["responsable"]))));
 		$dependencia = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["dependencia"]))));
 		$dependenciaMunicipal = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["dependenciaMunicipal"]))));
 		$ngira = $this->ngira();
-		$consulta = "INSERT INTO gira(pregira_id,fecha,hora,nombre_evento,num_asistente,domicilio,colonia,delegacion_id,seccion,reponsable,dependencia,dep_municipal_id,ngira,realizo,fecha_elaboracion) VALUES ($pregiraId,'$fecha','$hora','$nomEvento','$numAsistentes','$domicilio','$colonia',$delegacion,'$seccion','$responsable','$dependencia',$dependenciaMunicipal,$ngira,'usuario','".date("Y-m-d")."');";
+		$consulta = "INSERT INTO gira(pregira_id,fecha,hora,nombre_evento,num_asistente,domicilio,colonia,delegacion_id,seccion,responsable,dependencia,dep_municipal_id,ngira,realizo,fecha_elaboracion) VALUES ($pregiraId,'$fecha','$hora','$nomEvento','$numAsistentes','$domicilio','$colonia',$delegacion,'$seccion','$responsable','$dependencia',$dependenciaMunicipal,$ngira,'usuario','".date("Y-m-d")."');";
 		mysql_query($consulta,$this->conexion) or die (mysql_error());
 		$consulta = "SELECT LAST_INSERT_ID() AS id;";
 		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());

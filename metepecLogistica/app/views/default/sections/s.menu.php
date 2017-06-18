@@ -139,6 +139,7 @@
           <ul class="treeview-menu">
            <li><a href="index.php?action=crearGira"><i class="fa fa-circle-o"></i> Crear</a></li>
             <li><a href="index.php?action=historialGira"><i class="fa fa-circle-o"></i> Historial</a></li>
+			<li><a href="index.php?action=indexUserSup"><i class="fa fa-circle-o"></i> USER</a></li>
           </ul>
         </li>
        
@@ -208,6 +209,47 @@
           </ul>
         </li> -->
         <li><a href="index.php?action=historialEventoC"><i class="fa fa-book"></i> <span>Historial de Eventos</span></a></li>
+		
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Validar Gira</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+           <li><a href="index.php?action=aprobacionGira"><i class="fa fa-circle-o"></i> Aprobacion</a></li>
+            <li><a href="index.php?action=historialAGira"><i class="fa fa-circle-o"></i> Historial</a></li>
+          </ul>
+        </li>
+       
+     
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Validar Pregira</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?action=aprobacionPregira"><i class="fa fa-circle-o"></i> Aprobacion</a></li>
+            <li><a href="index.php?action=historialAPregira"><i class="fa fa-circle-o"></i> Historial</a></li>
+          </ul>
+        </li>
+      
+
+		<li class="treeview">
+          <a href="#">
+            <i class="fa fa-book"></i> <span>Estadisticas</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.php?action=crearPregira"><i class="fa fa-circle-o"></i> Aprobacion</a></li>
+            <li><a href="index.php?action=historialPregira"><i class="fa fa-circle-o"></i> Historial</a></li>
+          </ul>
+        </li>
         <!--<li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>

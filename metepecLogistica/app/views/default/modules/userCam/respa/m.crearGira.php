@@ -135,12 +135,12 @@
                                       <label>RESPONSABLE U ORGANIZADOR</label>
                                         <select name="Datos[responsable]" class="form-control" required>
                                             <option value="">---Seleccionar responsable u organizador---</option>
-                                          <option value="Gobierno Federal">Gobierno Federal</option>
-                						  <option value="Gobierno Estatal">Gobierno Estatal</option>
-                                          <option value="Gobierno Municipal">Gobierno Municipal</option>
-                						  <option value="ONG">ONG</option>
-                						  <option value="CDE PRI">CDE PRI</option>
-                						  <option value="CEN PRI">CEN PRI</option>
+                                          <option>Gobierno Federal</option>
+                						  <option>Gobierno Estatal</option>
+                                          <option>Gobierno Municipal</option>
+                						  <option>ONG</option>
+                						  <option>CDE PRI</option>
+                						  <option>CEN PRI</option>
                                         </select>
                                     </div>
                                 </div>
@@ -166,69 +166,15 @@
                 <!-- Tabs datos particulares -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs pull-right">
-					    <li class="disabledTab" id="bf"><a href="#beneficiarios" data-toggle="tab">Beneficirios</a></li>
-                        <li class="disabledTab" id="od"><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
-                        <li class="disabledTab" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>                    
-                        <li class="disabledTab" id="ie"><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
-                        <li class="disabledTab" id="p"><a href="#presidium" data-toggle="tab">Presidium</a></li>
-						<li class="active" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
+					    <li class="" id="pm"><a href="#beneficiarios" data-toggle="tab">Beneficirios</a></li>
+                        <li class="" id="od"><a href="#ordenDia" data-toggle="tab">Orden del dia</a></li>
+                        <li class="" id="ic"><a href="#inteCabildo" data-toggle="tab">Integrantes de Cabildo</a></li>                    
+                        <li class="" id="ie"><a href="#invEspeciales" data-toggle="tab">Invitados Especiales</a></li>
+                        <li class="active"><a href="#presidium" data-toggle="tab">Presidium</a></li>
+						<li class="" id="pm"><a href="#preMunicipal" data-toggle="tab">Presidente Municipal</a></li>
                     </ul>
-                    <div class="tab-content no-padding">
-                        <!-- Tab presidente municipal -->
-                        <div class="chart tab-pane active" id="preMunicipal">
-                            <div class="box box-primary">
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Ingrese datos : </h3>
-                                </div>
-                                <!-- /.box-header -->
-                                <!-- form start -->
-                                <div class="box-body">
-
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label>ASISTIÓ</label>
-                                                    <div class="input-group">
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="SI" class="radioAsistenciaPm">SI
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="NO" class="radioAsistenciaPm">NO
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label>NOMBRE DE REPRESENTANTE </label>
-                                                    <input type="text" name="Datos[nombreRepresentantePm]" id="nomRePm" class="form-control" disabled="true">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label>CUMPLIÓ</label>
-                                                    <div class="input-group">
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioCumplioPm]" value="SI" disabled="true" class="radioCumplioPm">SI
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="Datos[btnRadioCumplioPm]" value="NO" disabled="true" class="radioCumplioPm">NO
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- /.box-body -->
-                                <div class="box-footer">
-                                    <button type="button" class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
-                                </div>
-                            </div><!-- /.box -->
-
-                        </div> 
-
-                        <div class="chart tab-pane" id="presidium">
+                    <div class="tab-content no-padding">  
+                        <div class="chart tab-pane active" id="presidium">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Ingrese datos  :</h3>
@@ -269,13 +215,13 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>NOMBRE DEL REPRESENTANTE</label>
-                                                <input type="text" class="form-control" id="nombreRepresentante" disabled="true">
+                                                <input type="text" class="form-control" id="nombreRepresentante">
                                             </div>
                                         </div>
 										 <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>CARGO</label>
-                                                <input type="text" class="form-control" id="cargoRepresentante" disabled="true">
+                                                <input type="text" class="form-control" id="cargoRepresentante">
                                             </div>
                                         </div>
 										 <div class="col-md-2">
@@ -283,10 +229,10 @@
                                                 <label>ASISTIÓ</label>
                                                 <div class="input-group">
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="btnRadioAsistenciaRep" value="SI" class="radioAsistenciaRep" disabled="true">SI
+                                                        <input type="radio" name="btnRadioAsistenciaRep" value="SI" class="radioAsistenciaRep">SI
                                                     </label>
                                                     <label class="radio-inline">
-                                                        <input type="radio" name="btnRadioAsistenciaRep" value="NO" class="radioAsistenciaRep" disabled="true">NO
+                                                        <input type="radio" name="btnRadioAsistenciaRep" value="NO" class="radioAsistenciaRep">NO
                                                     </label>
                                                 </div>
                                             </div>
@@ -390,7 +336,57 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!-- Tab presidente municipal -->
+                        <div class="chart tab-pane" id="preMunicipal">
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Ingrese datos : </h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <div class="box-body">
+
+                                    <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>ASISTIÓ</label>
+                                                    <div class="input-group">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="SI" class="radioAsistenciaPm">SI
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="NO" class="radioAsistenciaPm">NO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>NOMBRE DE REPRESENTANTE </label>
+                                                    <input type="text" name="Datos[nombreRepresentantePm]" class="form-control" disabled="true">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>CUMPLIÓ</label>
+                                                    <div class="input-group">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="Datos[btnRadioCumplioPm]" value="SI" disabled="true">SI
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="Datos[btnRadioCumplioPm]" value="NO" disabled="tru">NO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-success pull-right" disabled="true" id="btnPmContinuar">Continuar <span class="glyphicon glyphicon-arrow-right"></span></button>
+                                </div>
+                            </div><!-- /.box -->
+
+                        </div>
                         <div class="chart tab-pane" id="inteCabildo">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
@@ -544,29 +540,19 @@
                                                 <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label>HORA :</label>
-                                                        <div class="input-group clockpicker">
-                                                            <div class="input-group-addon">
-                                                                <i class="glyphicon glyphicon-time"></i>
-                                                            </div>
-                                                            <input type="text" name="Datos[horaActividad][]" class="form-control datosOrd">
-                                                        </div>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
-												<div class="col-md-7">
+												<div class="col-md-8">
                                                     <div class="form-group">
                                                         <label>ACTIVIDAD :</label>
-                                                        <input type="text" name="Datos[actividad][]" class="form-control datosOrd">
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
 												<div class="col-md-2">
                                                     <div class="form-group">
                                                         <label>DURACION :</label>
-                                                        <div class="input-group clockpicker">
-                                                            <div class="input-group-addon">
-                                                                <i class="glyphicon glyphicon-time"></i>
-                                                            </div>
-                                                            <input type="text" name="Datos[duracionActividad][]" class="form-control datosOrd">
-                                                        </div>
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
@@ -580,9 +566,7 @@
                                     </div>
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
-                                    <button type="button" class="btn btn-success pull-right" disabled="true" id="btnOdContinuar">Continuar
-                                    <span class="glyphicon glyphicon-arrow-right"></span></button>
-                                    <!-- <button type="submit" class="btn btn-primary pull-right">Enviar</button> -->
+                                    <button type="submit" class="btn btn-primary pull-right">Enviar</button>
                                 </div>
                             </div><!-- /.box -->
                         </div>
@@ -593,18 +577,18 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body">
-                                        <div class="col-md-12 camposBeneficiario">
+                                        <div class="col-md-12 odactividad">
                                             <div class="row">
-                                                <div class="col-md-7">
+                                                <div class="col-md-8">
                                                     <div class="form-group">
                                                         <label>NOMBRE :</label>
-                                                        <input type="text" name="Datos[nombreBeneficiario][]" class="form-control">
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
 												<div class="col-md-4">
                                                     <div class="form-group">
                                                         <label>DELEGACION :</label>
-                                                        <input type="text" name="Datos[delegacionBeneficiario][]" class="form-control">
+                                                        <input type="text" name="Datos[actividad][]" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
@@ -612,7 +596,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="col-md-1">
-                                                <button type="button" class="btn btn-success btn-sm" id="btnAgregarBeneficiario">Agregar</button>
+                                                <button type="button" class="btn btn-success btn-sm" id="btnAgregarActividad">Agregar</button>
                                             </div>
                                         </div>
                                     </div>

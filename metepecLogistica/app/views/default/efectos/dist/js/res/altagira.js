@@ -15,7 +15,7 @@ function agregarPresidium()
 	nombreRep = $('#nombreRepresentante').val();
 	cargoRep = $('#cargoRepresentante').val();
 	radioRepAsistio = $('.radioAsistenciaRep:checked').val();
-	if(true)//validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio))
+	if(validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio))
 	{
 		$("<tr><td>"+nombreTitular+"<input type='hidden' name='Datos[nombreTitular][]' value='"+nombreTitular+"'></td><td>"+cargoTitular+"<input type='hidden' name='Datos[cargoTitular][]' value='"+cargoTitular+"'></td><td>"+radioTitularAsistio+"<input type='hidden' name='Datos[radioAsistenciaTitular][]' value='"+radioTitularAsistio+"'></td><td>"+nombreRep+"<input type='hidden' name='Datos[nombreRepresentante][]' value='"+nombreRep+"'></td><td>"+cargoRep+"<input type='hidden' name='Datos[cargoRepresentante][]' value='"+cargoRep+"'></td><td>"+radioRepAsistio+"<input type='hidden' name='Datos[radioAsistenciaRep][]' value='"+radioRepAsistio+"'></td><td><input  type='button' class='btn btn-danger btn-sm'  onclick='eliminarFilaPresidium(this)' value='X'></td></tr>").appendTo("#filaTbodyPresidium");
 		$("#btnPreContinuar").prop("disabled",false);
@@ -31,13 +31,13 @@ function eliminarFilaPresidium(fila)
 		$("#btnPreContinuar").prop("disabled",true);
 
 }
-// function validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio)
-// {
-// 	if(nombreTitular != "" && cargoTitular != "" && radioTitularAsistio != undefined && nombreRep != "" && cargoRep != "" && radioRepAsistio != undefined)
-// 		return true;
-// 	else
-// 		return false;
-// }
+function validarFormPresidium(nombreTitular,cargoTitular,radioTitularAsistio,nombreRep,cargoRep,radioRepAsistio)
+{
+	if(nombreTitular != "" && cargoTitular != "" && radioTitularAsistio != undefined && nombreRep != "" && cargoRep != "" && radioRepAsistio != undefined)
+		return true;
+	else
+		return false;
+}
 $("#btnPreContinuar").click(function()
 {
 	$("#ie").removeClass("disabledTab");
@@ -58,7 +58,7 @@ function agregarInvEsp()
 }
 $("#btnIeContinuar").click(function()
 {
-	$("#ic").removeClass("disabledTab");
+	$("#pm").removeClass("disabledTab");
 	$(".nav-tabs li:eq(2) a").tab('show');
 });
 function eliminarFilaInvEsp(fila)
@@ -74,44 +74,16 @@ $(document).on("click",".radioAsistenciaPm", function()
 	switch(valueRadio)
 	{
 		case'SI':
-			$("#nomRePm").prop("disabled",true);
-			$(".radioCumplioPm").prop("disabled",true);
+			$("#btnPmContinuar").prop("disabled",false);
 			break;
 		case'NO':
-			$("#nomRePm").prop("disabled",false);
-			$(".radioCumplioPm").prop("disabled",false);
 			break;
 	}
-	$("#btnPmContinuar").prop("disabled",false);
-});
-$(document).on("click",".radioAsistioTitular", function()
-{
-	var valueRadio = $(this).val();
-	switch(valueRadio)
-	{
-		case'SI':
-			$("#nombreTitular").prop("disabled",false);
-			$("#cargoTitular").prop("disabled",false);
-
-			$("#nombreRepresentante").prop("disabled",true);
-			$("#cargoRepresentante").prop("disabled",true);
-			$(".radioAsistenciaRep").prop("disabled",true);
-			break;
-		case'NO':
-			$("#nombreTitular").prop("disabled",true);
-			$("#cargoTitular").prop("disabled",true);
-
-			$("#nombreRepresentante").prop("disabled",false);
-			$("#cargoRepresentante").prop("disabled",false);
-			$(".radioAsistenciaRep").prop("disabled",false);
-			break;
-	}
-	$("#btnPmContinuar").prop("disabled",false);
 });
 $("#btnPmContinuar").click(function()
 {
-	$("#p").removeClass("disabledTab");
-	$(".nav-tabs li:eq(4) a").tab('show');
+	$("#ic").removeClass("disabledTab");
+	$(".nav-tabs li:eq(1) a").tab('show');
 });
 $(document).on("click",".checkboxIc",function()
 {
@@ -124,12 +96,7 @@ $(document).on("click",".checkboxIc",function()
 $("#btnIcContinuar").click(function()
 {
 	$("#od").removeClass("disabledTab");
-	$(".nav-tabs li:eq(1) a").tab('show');
-});
-$("#btnOdContinuar").click(function()
-{
-	$("#bf").removeClass("disabledTab");
-	$(".nav-tabs li:eq(0) a").tab("show");
+	$(".nav-tabs li:eq(0) a").tab('show');
 });
 $('.clockpicker').clockpicker(
 {
@@ -139,30 +106,7 @@ $('.clockpicker').clockpicker(
 });
 $("#btnAgregarActividad").click(function()
 {
-	$('<div class="row"><div class="col-md-2"><div class="form-group"><div class="input-group clockpicker"><div class="input-group-addon"><i class="glyphicon glyphicon-time"></i></div><input type="text" name="Datos[horaActividad][]" class="form-control"></div></div></div><div class="col-md-7"><div class="form-group"><input type="text" name="Datos[actividad][]" class="form-control"></div></div><div class="col-md-2"><div class="form-group"><div class="input-group clockpicker"><div class="input-group-addon"><i class="glyphicon glyphicon-time"></i></div><input type="text" name="Datos[duracionActividad][]" class="form-control"></div></div></div><div class="col-md-1"><div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".odactividad");
-	$('.clockpicker').clockpicker(
-	{
-		donetext: 'Agregar hora',
-		autoclose: true,
-		default: 'now'
-	});
-});
-$("#btnAgregarBeneficiario").click(function()
-{
-	$('<div class="row"><div class="col-md-7"><div class="form-group"><input type="text" name="Datos[nombreBeneficiario][]" class="form-control"></div></div><div class="col-md-4"> <div class="form-group"><input type="text" name="Datos[delegacionBeneficiario][]" class="form-control"></div></div><div class="col-md-1"> <div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".camposBeneficiario");
-
-});
-$(document).on("keyup click",".datosOrd",function()
-{
-	var hora = "",actividad = "",duracion =  "";
-	hora = $('[name="Datos[horaActividad][]"]').val();
-	actividad = $('[name="Datos[actividad][]"]').val();
-	duracion = $('[name="Datos[duracionActividad][]"]').val();
-	if(hora != "" && actividad != "" && duracion != "")
-		$("#btnOdContinuar").prop("disabled",false);
-	else
-		$("#btnOdContinuar").prop("disabled",true);
-	// alert(duracion)
+	$('<div class="row"><div class="col-md-11"><div class="form-group"><input type="text" name="Datos[actividad][]" class="form-control"></div></div><div class="col-md-1"><div class="form-group"><button class="btn btn-danger btn-sm" onclick="eliminarFilaActividad(this)">X</button></div></div></div>').appendTo(".odactividad");
 });
 function eliminarFilaActividad(fila)
 {

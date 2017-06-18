@@ -5,7 +5,9 @@
 	require 'app/controller/mvc.controllerUserOfi.php';
 	$userO = new mvc_controllerUserOfi();	 
 	require 'app/controller/mvc.controllerUserCam.php'; 
-	$userC = new mvc_controllerUserCam();	
+	$userC = new mvc_controllerUserCam();
+    require 'app/controller/mvc.controllerUserSup.php'; 
+	$userS = new mvc_controllerUserSup();	
 		error_reporting(0);	
 
 
@@ -64,6 +66,29 @@
 	else 	if( $_GET['action'] == 'indexUserCam' ) //muestra  el modulo "index Principal User Campo"
 	{
 			$userC->indexUserCam();	
+	}
+	
+	/*Operaciones de Usuario de Supervisor*/
+	else 	if( $_GET['action'] == 'indexUserSup' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$userS->indexUserSup();	
+	}
+	else 	if( $_GET['action'] == 'aprobacionGira' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$userS->aprobacionGira();	
+	}
+	else 	if( $_GET['action'] == 'historialAGira' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$userS->historialAGira();	
+	}
+	
+	else 	if( $_GET['action'] == 'aprobacionPregira' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$userS->aprobacionPregira();	
+	}
+	else 	if( $_GET['action'] == 'historialAPregira' ) //muestra  el modulo "index Principal User Campo"
+	{
+			$userS->historialAPregira();	
 	}
 
 

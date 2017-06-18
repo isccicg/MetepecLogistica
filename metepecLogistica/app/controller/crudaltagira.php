@@ -7,7 +7,7 @@ if(isset($_GET["accion"]))
 	{
 		
 		case 'datosAltaGira':
-			print_r($_POST["Datos"]);
+			print_r($_POST["Datos"]["nombreTitular"]);
 			$datosG = $gira->altaGira($_POST["Datos"]); 
 			break;
 		case 'dependenciasM':

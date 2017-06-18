@@ -2,7 +2,7 @@
 
 /*require 'app/model/universitario.class.php';*/
 
-class mvc_controllerUserOfi {  
+class mvc_controllerUserSup {  
 	
 
   function index()
@@ -23,48 +23,36 @@ class mvc_controllerUserOfi {
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);	
 		$this->view_page($pagina);
    }
-   function crearCitatorio()
+   function aprobacionGira()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.crearCitatorio.php');
+		$html = $this->load_page('app/views/default/modules/userSup/m.aprobacionGira.php');
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
-    function crearEvento()
+    function aprobacionPregira()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.crearEvento.php');
+		$html = $this->load_page('app/views/default/modules/userSup/m.aprobacionPregira.php');
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
-   function crearFormato()
+   
+   function historialAGira()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.crearFormato.php');
+		$html = $this->load_page('app/views/default/modules/userSup/m.historialAGira.php');
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
-   function historialCitatorio()
+    function historialAPregira()
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.historialCitatorio.php');
+		$html = $this->load_page('app/views/default/modules/userSup/m.historialAPregira.php');
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
-    function historialEvento()
-   {
-		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.historialEvento.php');
-		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
-		$this->view_page($pagina);
-   }
-   function historialFormato()
-   {
-		$pagina=$this->load_template('');	/*titulo de la pagina */			
-		$html = $this->load_page('app/views/default/modules/userOfi/m.historialFormato.php');
-		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
-		$this->view_page($pagina);
-   }
+   
 
 
 
@@ -82,7 +70,7 @@ class mvc_controllerUserOfi {
 		$head = $this->load_page('app/views/default/sections/s.head.php');		
 		$foot = $this->load_page('app/views/default/sections/s.foot.php');
 		$footer = $this->load_page('app/views/default/sections/s.footer.php');
-		$menu = $this->load_page('app/views/default/sections/s.menuUserO.php');
+		$menu = $this->load_page('app/views/default/sections/s.menuUserS.php');
 		$pagina = $this->replace_menuAdm('/\#MENU\#/ms' ,$menu , $pagina);
 		$pagina = $this->replace_content('/\#HEAD\#/ms' ,$head , $pagina);
 		$pagina = $this->replace_content('/\#FOOT\#/ms',$foot , $pagina);
