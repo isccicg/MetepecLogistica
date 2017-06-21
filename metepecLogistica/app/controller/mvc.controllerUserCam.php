@@ -75,7 +75,7 @@ class mvc_controllerUserCam {
    public function datosGiraTabla()
 	{
 		$datosGira = array();
-		$consulta = "SELECT * FROM gira";
+		$consulta = "SELECT g.ngira,g.fecha,g.nombre_evento,g.responsable,d.delegacion FROM gira g LEFT JOIN delegaciones d ON d.id = g.delegacion_id";
 		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
 		if($resultado)
 		{
@@ -89,7 +89,7 @@ class mvc_controllerUserCam {
 			foreach ($datosGira as $datosGira) 
 			{
 				
-				$tabla .= "<tr><td>".$datosGira["fecha"]."</td><td>".$datosGira["hora"]."</td><td>".$datosGira["nombre_evento"]."</td><td>".$datosGira["domicilio"]."</td></tr>";
+				$tabla .= "<tr><td> GR-".$datosGira["ngira"]."</td><td>".$datosGira["fecha"]."</td><td>".$datosGira["nombre_evento"]."</td><td>".$datosGira["responsable"]."</td><td>".$datosGira["delegacion"]."</td><td align='center'><a href=''><i class='fa fa-search'></i></a></td></tr>";
 
 			}
 		}

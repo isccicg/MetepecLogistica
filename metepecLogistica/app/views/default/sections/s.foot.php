@@ -35,6 +35,9 @@
 <script src="app/views/default/efectos/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="app/views/default/efectos/dist/js/demo.js"></script>
+<!-- Data table bootstrap -->
+<script src="app/views/default/efectos/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="app/views/default/efectos/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="app/views/default/efectos/plugins/iCheck/icheck.min.js"></script>
 <!-- Alta de pregira -->
@@ -43,3 +46,9 @@
 <script src="app/views/default/efectos/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
 <!-- Alta de gira -->
 <script src="app/views/default/efectos/dist/js/altagira.js"></script>
+<script type="text/javascript">
+	$("#tableGira").DataTable();
+	$('.datepicker').datepicker({
+ autoclose: true
+});
+</script>
