@@ -29,62 +29,72 @@
                     <!-- form start -->
                     
                     <div class="box-body">
+                        <div class="row">
                             <div class="col-md-12">
-                                <div class="pull-right">
+                                <div class="col-md-3 pull-right">
+                                    <div class="form-group">
+                                        <label>BUSCAR FOLIO DE PREGIRA:</label>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Seleccionar folio pregira" name="Datos[buscarFolio]" class="form-control buscarFolio" disabled="true">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 pull-right">
                                     <div class="form-group">
                                         <label>Pregira</label>
                                         <div class="input-group">
                                             <label class="radio-inline">
-                                                <input type="radio" name="Datos[btnRadioCumplio]" value="SI">SI
+                                                <input type="radio" name="Datos[btnRadioCumplio]" value="SI" class="radioPregira">SI
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="Datos[btnRadioCumplio]" value="NO">NO
+                                                <input type="radio" name="Datos[btnRadioCumplio]" value="NO" class="radioPregira" checked>NO
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-12">
-                                <div class="row ">
-                                    <div class="col-md-2 pull-right">
-                                        <!-- Date -->
-                                        <div class="form-group">
-                                            <label>FOLIO:</label>
-                                            <div class="input-group date">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-hashtag"></i>
-                                                </div>
-                                                <input type="text" name="Datos[folio]" class="form-control pull-right" disabled="">
+                                <div class="col-md-2 pull-right">
+                                    <div class="form-group">
+                                        <label>FOLIO:</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-hashtag"></i>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 pull-right">
-                                        <!-- Date -->
-                                        <div class="form-group">
-                                            <label>HORA:</label>
-                                            <div class="input-group clockpicker">
-                                                <div class="input-group-addon">
-                                                    <i class="glyphicon glyphicon-time"></i>
-                                                </div>
-                                                <input type="text" name="Datos[hora]" class="form-control pull-right" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 pull-right">
-                                        <!-- Folio -->
-                                        <div class="form-group">
-                                            <label>FECHA:</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-calendar"></i>
-                                                </div>
-                                                <input type="text" name="Datos[fecha]" class="form-control pull-right" id="datepicker" required>
-                                            </div>
+                                            <input type="text" name="Datos[folio]" class="form-control pull-right" disabled="">
                                         </div>
                                     </div>
                                 </div>
-                            </div>  <!-- col-md-12 -->
+                                <div class="col-md-2 pull-right">
+                                    <!-- Date -->
+                                    <div class="form-group">
+                                        <label>HORA:</label>
+                                        <div class="input-group clockpicker">
+                                            <div class="input-group-addon">
+                                                <i class="glyphicon glyphicon-time"></i>
+                                            </div>
+                                            <input type="text" name="Datos[hora]" class="form-control pull-right" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 pull-right">
+                                    <div class="form-group">
+                                        <label>FECHA:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="Datos[fecha]" class="form-control pull-right" id="datepicker" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                            
                             <div class="row">
                                 <div class="col-md-10">
@@ -95,11 +105,31 @@
                                 </div>
     							<div class="col-md-2">
                                     <div class="form-group">
-                                        <label>NUMERO ASISTENTES</label>
-                                        <input type="text" name="Datos[numAsistentes]" class="form-control" id="numAsistentes" required>
+                                        <label>RUBRO | TEMA</label>
+                                        <input type="text" name="Datos[rubro]" class="form-control" required>
                                     </div>
                                 </div>
                             </div>  <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>LUGAR DE EVENTO</label>
+                                        <input type="text" name="Datos[lugarEvento]" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>ASISTENTES CONV</label>
+                                        <input type="text" name="Datos[numAsisConvocados]" class="form-control text-right" id="numAsistentes" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>ASISTENTES REALES</label>
+                                        <input type="text" name="Datos[numAsisReales]" class="form-control text-right" id="numAsistentes" required>
+                                    </div>
+                                </div>                                
+                            </div>
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
@@ -123,7 +153,7 @@
     							 <div class="col-md-1">
                                     <div class="form-group">
                                         <label>SECCION</label>
-                                        <input type="text" name="Datos[seccion]" class="form-control" required>
+                                        <input type="text" name="Datos[seccion]" class="form-control text-right" id="numAsistentes" required>
                                     </div>
                                 </div>
                             </div>  <!-- /.row -->
@@ -186,9 +216,18 @@
 
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="col-md-3">
-                                                <div class="form-group">
+                                            <div class="col-md-4">
+                                                <div class="form-group" align="center">
                                                     <label>ASISTIÓ</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" align="center">
+                                                <h5><label>Lic. David Lopez Cárdenas</label></h5>
+                                                <h5><label>Presidente Municipal de Metepec</label></h5>
+                                            </div>
+                                            <div class="col-md-4" align="center">
+                                                <div class="form-group">
+                                                    <label>OPCIÓN</label>
                                                     <div class="input-group">
                                                         <label class="radio-inline">
                                                             <input type="radio" name="Datos[btnRadioAsistenciaPm]" value="SI" class="radioAsistenciaPm">SI
@@ -199,13 +238,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-md-4" align="center">
                                                 <div class="form-group">
                                                     <label>NOMBRE DE REPRESENTANTE </label>
-                                                    <input type="text" name="Datos[nombreRepresentantePm]" id="nomRePm" class="form-control" disabled="true">
+                                                    <input type="text" name="Datos[nombreRepresentantePm]" class="form-control representantePm" disabled="true">
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4" align="center">
+                                                <div class="form-group">
+                                                    <label>CARGO DE REPRESENTANTE </label>
+                                                    <input type="text" name="Datos[cargoRepresentantePm]" class="form-control representantePm" disabled="true">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" align="center">
                                                 <div class="form-group">
                                                     <label>CUMPLIÓ</label>
                                                     <div class="input-group">
@@ -402,8 +451,23 @@
                                     <div class="row"> 
 									    <div class="col-md-4">
     											<ul class="todo-list">
+                                                    <li>
+                                                        <span class="handle">
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                        </span>
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="SRI. AYUNTAMINETO" class="checkboxIc">
+                                                        <span class="text">SRI. AYUNTAMIENTO</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="handle">
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                        </span>
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="SINDICO" class="checkboxIc">
+                                                        <span class="text">SINDICO</span>
+                                                    </li>
     											    <li>
-    													<!-- drag handle -->
     												    <span class="handle">
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
@@ -427,14 +491,18 @@
     													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
     													<span class="text">R3</span>
     												</li>
-    												<li>
-    												    <span class="handle">
-    													   <i class="fa fa-ellipsis-v"></i>
-    													   <i class="fa fa-ellipsis-v"></i>
-    												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R4" class="checkboxIc">
-    												    <span class="text">R4</span>
-    											    </li>
+    											</ul>
+                                        </div><!-- /.box -->
+										<div class="col-md-4">
+    											<ul class="todo-list">
+                                                    <li>
+                                                        <span class="handle">
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                        </span>
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R4" class="checkboxIc">
+                                                        <span class="text">R4</span>
+                                                    </li>
                                                     <li>
                                                         <span class="handle">
                                                            <i class="fa fa-ellipsis-v"></i>
@@ -442,18 +510,13 @@
                                                         </span>
                                                         <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R5" class="checkboxIc">
                                                         <span class="text">R5</span>
-                                                    </li>	
-    											</ul>
-                                        </div><!-- /.box -->
-										<div class="col-md-4">
-    											<ul class="todo-list">
+                                                    </li>
     											    <li>
-    													<!-- drag handle -->
     												    <span class="handle">
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R1" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R6" class="checkboxIc">
         												<span class="text">R6</span>						
     												</li>
     												<li>
@@ -461,7 +524,7 @@
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R2" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R7" class="checkboxIc">
     												    <span class="text">R7</span>
     												</li>
     												<li>
@@ -469,36 +532,37 @@
     													    <i class="fa fa-ellipsis-v"></i>
     													    <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
+    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R8" class="checkboxIc">
     													<span class="text">R8</span>
     												</li>
-    												<li>
-    												    <span class="handle">
-    													   <i class="fa fa-ellipsis-v"></i>
-    													   <i class="fa fa-ellipsis-v"></i>
-    												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R4" class="checkboxIc">
-    												    <span class="text">R9</span>
-    											    </li>
+    													
+    											</ul>
+                                        </div><!-- /.box -->
+										<div class="col-md-4">
+    											<ul class="todo-list">
                                                     <li>
                                                         <span class="handle">
                                                            <i class="fa fa-ellipsis-v"></i>
                                                            <i class="fa fa-ellipsis-v"></i>
                                                         </span>
-                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R5" class="checkboxIc">
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R9" class="checkboxIc">
+                                                        <span class="text">R9</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="handle">
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                           <i class="fa fa-ellipsis-v"></i>
+                                                        </span>
+                                                        <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R10" class="checkboxIc">
                                                         <span class="text">R10</span>
-                                                    </li>	
-    											</ul>
-                                        </div><!-- /.box -->
-										<div class="col-md-4">
-    											<ul class="todo-list">
+                                                    </li>
     											    <li>
     													<!-- drag handle -->
     												    <span class="handle">
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R1" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R11" class="checkboxIc">
         												<span class="text">R11</span>						
     												</li>
     												<li>
@@ -506,7 +570,7 @@
     													   <i class="fa fa-ellipsis-v"></i>
     													   <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R2" class="checkboxIc">
+    												    <input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R12" class="checkboxIc">
     												    <span class="text">R12</span>
     												</li>
     												<li>
@@ -514,7 +578,7 @@
     													    <i class="fa fa-ellipsis-v"></i>
     													    <i class="fa fa-ellipsis-v"></i>
     												    </span>
-    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R3" class="checkboxIc">
+    													<input type="checkbox" name="Datos[checkboxIntCabildo][]" value="R13" class="checkboxIc">
     													<span class="text">R13</span>
     												</li>
     												

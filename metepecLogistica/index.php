@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     require 'app/controller/mvc.controller.php';
 	$mvc = new mvc_controller();	
 	require 'app/controller/mvc.controllerUserOfi.php';
@@ -10,7 +10,8 @@
 	$userS = new mvc_controllerUserSup();	
 		error_reporting(0);	
 
-
+if(isset($_SESSION["slm_usu"]))
+{
 /*Operaciones de Usuario de Oficina*/
    	if( $_GET['action'] == 'crearCitatorio' ) //muestra  el modulo "crear Citatorio"
 	{
@@ -90,16 +91,15 @@
 	{
 			$userS->historialAPregira();	
 	}
-
-
-	else 	if( $_GET['action'] == 'login' ) //muestra  el modulo "index Principal User Campo"
+	else 	if( $_GET['action'] == 'menuGeneral') //muestra  el modulo "index Principal User Campo"
 	{
-			$mvc->login();	
+			$mvc->index();	
 			//echo "entre";
-	}	
-	else{ 
-
-        $mvc->index();   /*menu principal todas las funciones*/
-
 	}
+}	
+else
+{ 
+	$mvc->login();	
+    // $mvc->index();   /*menu principal todas las funciones*/
+}
 ?>

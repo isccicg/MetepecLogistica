@@ -18,7 +18,9 @@ class gira
 		$fecha = date("Y-m-d",strtotime(mysql_real_escape_string(strip_tags(stripslashes(trim($datos["fecha"]))))));
 		$hora = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["hora"]))));
 		$nomEvento = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreEvento"]))));
-		$numAsistentes = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["numAsistentes"]))));
+		$lugarEvento = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["lugarEvento"]))));
+		$numAsisConvocado = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["numAsisConvocados"]))));
+		$numAsisReales = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["numAsisReales"]))));
 		$domicilio = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["domicilio"]))));
 		$colonia = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["colonia"]))));
 		$delegacion = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["delegacion"]))));
@@ -27,8 +29,10 @@ class gira
 		$dependencia = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["dependencia"]))));
 		$dependenciaMunicipal = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["dependenciaMunicipal"]))));
 		$ngira = $this->ngira();
-		$consulta = "INSERT INTO gira(pregira_id,fecha,hora,nombre_evento,num_asistente,domicilio,colonia,delegacion_id,seccion,responsable,dependencia,dep_municipal_id,ngira,realizo,fecha_elaboracion) VALUES ($pregiraId,'$fecha','$hora','$nomEvento','$numAsistentes','$domicilio','$colonia',$delegacion,'$seccion','$responsable','$dependencia',$dependenciaMunicipal,$ngira,'usuario','".date("Y-m-d")."');";
+
+		$consulta = "INSERT INTO gira(pregira_id,fecha,hora,nombre_evento,lugar_evento,num_asistentes_convocados,num_asistentes_reales,domicilio,colonia,delegacion_id,seccion,responsable,dependencia,dep_municipal_id,ngira,realizo,fecha_elaboracion) VALUES ($pregiraId,'$fecha','$hora','$nomEvento','$lugarEvento',$numAsisConvocado,$numAsisReales,'$domicilio','$colonia',$delegacion,'$seccion','$responsable','$dependencia',$dependenciaMunicipal,$ngira,'usuario','".date("Y-m-d")."');";
 		mysql_query($consulta,$this->conexion) or die (mysql_error());
+
 		$consulta = "SELECT LAST_INSERT_ID() AS id;";
 		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
 		$giraId = mysql_fetch_assoc($resultado);
@@ -43,10 +47,13 @@ class gira
 		}
 		else
 		{
+			$asistenciaPreMunicipal = 0;
 			$nomRepresentante = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["nombreRepresentantePm"]))));
+			$cargoRepresentantePm = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["cargoRepresentantePm"]))));
 			$cumplioRepresentante = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["btnRadioCumplioPm"]))));
+			$cumplioRepresentante = ($cumplioRepresentante === "SI") ? 1:0;
 		}
-		$consulta = "INSERT INTO presidente(gira_id,asistencia,nombre_representante,cumplio) VALUES ($giraId,'$asistenciaPreMunicipal','$nomRepresentante','$cumplioRepresentante')";
+		$consulta = "INSERT INTO presidente(gira_id,asistencia,nombre_representante,cargo_representante,cumplio) VALUES ($giraId,'$asistenciaPreMunicipal','$nomRepresentante','$cargoRepresentantePm','$cumplioRepresentante')";
 		mysql_query($consulta,$this->conexion) or die (mysql_error());
 		//Fin Presidente municipal
 
@@ -62,7 +69,7 @@ class gira
 			$cargoRepresentante = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["cargoRepresentante"][$i]))));
 			$radioAsistenciaRep = mysql_real_escape_string(strip_tags(stripslashes(trim($datos["radioAsistenciaRep"][$i]))));
 			$radioAsistenciaRep = ($radioAsistenciaRep === "SI") ? 1:0;
-			$consulta = "INSERT INTO presidium(gira_id,nombre_titular,cargo_titular,asistencia_titular,nombre_representante,cargo_representante,asistencia_representante) VALUES ($giraId,'$nombreTitular','$cargoTitular',$radioAsistenciaTitular,'$nombreRepresentante','$$cargoRepresentante',$radioAsistenciaRep);";
+			$consulta = "INSERT INTO presidium(gira_id,nombre_titular,cargo_titular,asistencia_titular,nombre_representante,cargo_representante,asistencia_representante) VALUES ($giraId,'$nombreTitular','$cargoTitular',$radioAsistenciaTitular,'$nombreRepresentante','$cargoRepresentante',$radioAsistenciaRep);";
 			mysql_query($consulta,$this->conexion) or die (mysql_error());
 		}
 		//Fin alta presidium

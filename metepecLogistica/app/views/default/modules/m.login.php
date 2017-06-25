@@ -6,13 +6,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Introducir Usuario y Contraseña </p>
 
-    <form action="../../index2.html" method="post">
+    <form action="app/controller/crudindexprincipal.php?urlValue=login" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Usuario">
+        <input type="text" name="usuario" class="form-control" placeholder="Usuario">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input type="password" name="contrasena" class="form-control" placeholder="Contraseña">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

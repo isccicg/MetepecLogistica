@@ -38,6 +38,14 @@ function eliminarFilaPresidium(fila)
 // 	else
 // 		return false;
 // }
+$(".radioPregira").click(function()
+{
+
+	if( $(this).val() == "SI")
+		$(".buscarFolio").prop("disabled",false);
+	else
+		$(".buscarFolio").prop("disabled",true);
+});
 $("#btnPreContinuar").click(function()
 {
 	$("#ie").removeClass("disabledTab");
@@ -74,11 +82,11 @@ $(document).on("click",".radioAsistenciaPm", function()
 	switch(valueRadio)
 	{
 		case'SI':
-			$("#nomRePm").prop("disabled",true);
+			$(".representantePm").prop("disabled",true);
 			$(".radioCumplioPm").prop("disabled",true);
 			break;
 		case'NO':
-			$("#nomRePm").prop("disabled",false);
+			$(".representantePm").prop("disabled",false);
 			$(".radioCumplioPm").prop("disabled",false);
 			break;
 	}
