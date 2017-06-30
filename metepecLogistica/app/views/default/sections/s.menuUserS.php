@@ -45,7 +45,7 @@
       <ul class="sidebar-menu">
         <li class="header">Menu General</li>
                 <li>
-                <a href="index.php?action=indexUserCam"><i class="fa fa-dashboard"></i> <span>Inicio</span></a>
+                <a href="index.php?action=indexUserSup"><i class="fa fa-dashboard"></i> <span>Inicio</span></a>
                 </li>
 
 

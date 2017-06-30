@@ -53,27 +53,17 @@ class mvc_controllerUserCam {
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
-   function historialGira()
-   {
+   function historialGira()   {
 
 		$pagina=$this->load_template('');	/*titulo de la pagina */	
-    
-       
-
 		$html = $this->load_page('app/views/default/modules/userCam/m.historialGira.php');
-
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
-
 		$historial = $this->datosGiraTabla();
-
-
 		$pagina = $this->replace_historial('/\#HISTORIAL\#/ms' ,$historial , $pagina);	
-
 		$this->view_page($pagina);
 
    }
-   public function datosGiraTabla()
-	{
+   public function datosGiraTabla()	{
 		$datosGira = array();
 		$consulta = "SELECT g.ngira,g.fecha,g.nombre_evento,g.responsable,d.delegacion FROM gira g LEFT JOIN delegaciones d ON d.id = g.delegacion_id";
 		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
@@ -98,9 +88,14 @@ class mvc_controllerUserCam {
 	}
    function historialPregira()
    {
-		$pagina=$this->load_template('');	/*titulo de la pagina */			
+		
+		
+		
+		$pagina=$this->load_template('');	/*titulo de la pagina */	
 		$html = $this->load_page('app/views/default/modules/userCam/m.historialPregira.php');
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
+		$historial = $this->datosGiraTabla();
+		$pagina = $this->replace_historial('/\#HISTORIALP\#/ms' ,$historial , $pagina);	
 		$this->view_page($pagina);
    }
 
@@ -178,6 +173,11 @@ class mvc_controllerUserCam {
 
 
 	private function replace_historial($in='/\#HISTORIAL\#/ms', $out,$pagina)
+	{
+		 return preg_replace($in, $out, $pagina);	 	
+	}
+	
+	private function replace_historialP($in='/\#HISTORIALP\#/ms', $out,$pagina)
 	{
 		 return preg_replace($in, $out, $pagina);	 	
 	}
