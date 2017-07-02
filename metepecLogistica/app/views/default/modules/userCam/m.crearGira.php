@@ -164,7 +164,7 @@
                                     <div class="form-group">
                                       <label>RESPONSABLE U ORGANIZADOR</label>
                                         <select name="Datos[responsable]" class="form-control" required>
-                                            <option value="">---Seleccionar responsable u organizador---</option>
+                                            <option value="">--- Seleccionar responsable u organizador ---</option>
                                           <option value="Gobierno Federal">Gobierno Federal</option>
                 						  <option value="Gobierno Estatal">Gobierno Estatal</option>
                                           <option value="Gobierno Municipal">Gobierno Municipal</option>

@@ -19,7 +19,7 @@ if(isset($_GET['urlValue']))
 				$resultado = $valida->validaUsuario($_POST['usuario'],$_POST['contrasena']);
 					if($resultado === "OK"){
 						// echo "ok";
-						header('Location:../../index.php?action=menuGeneral');
+						header('Location:../../index.php');
 					}
 					else{
 						$_SESSION["slm_error"] = $resultado;

@@ -30,11 +30,12 @@
 								$consulta = "SELECT * FROM usuario WHERE usuario = '$usuario' and contrasena = '".sha1($contrasena)."'"; //Consulta si existe el usuario con el password correcto                   
 					            $resultado = mysql_query($consulta,$this->conexion) or die(mysql_error());
 					           	$filas = mysql_num_rows($resultado);
-					           	$idUsuario = mysql_fetch_assoc($resultado);
+					           	$datosUsuario = mysql_fetch_assoc($resultado);
 								if($filas === 1){
 									$_SESSION["slm_usu"] = $usuario;
+									$_SESSION["tipoUsuario"] = $datosUsuario["tipousuario"];
 									$ultimo_ingreso = date('Y-m-d H:i:s');
-									$usuario_id = $idUsuario['id'];
+									$usuario_id = $datosUsuario['id'];
 									$consulta = "UPDATE usuario SET usuario_ultimo_ingreso = '$ultimo_ingreso' WHERE id = '$usuario_id'";              
 						            $resultado = mysql_query($consulta,$this->conexion);
 						            if($resultado)
