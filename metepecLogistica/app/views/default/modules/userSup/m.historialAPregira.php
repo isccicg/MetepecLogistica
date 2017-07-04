@@ -19,18 +19,48 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Hover Data Table</h3>
+              <div class="row">
+                <div class="col-md-3">
+                  <!-- <div class="form-group"> -->
+                    <label>DE:</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" name="Datos[fechaInicial]" class="form-control pull-right datepicker">
+                    </div>
+                  <!-- </div> -->
+                </div>
+                <div class="col-md-3">
+                  <!-- <div class="form-group"> -->
+                    <label>HASTA:</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" name="Datos[fechaFinal]" class="form-control pull-right datepicker">
+                    </div>
+                  <!-- </div> -->
+                </div>
+                <div class="col-lg-1 col-xs-12 text-center">
+                    <label>&nbsp;</label>
+                    <div class="btn-group btn-block text-center">
+                        <button class="btn btn-primary btn-sm" type="submit" value="listaRcg" name="accion">Filtrar</button>
+                    </div>
+                </div>
+              </div>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
+            <div class="box-body table-responsive">
+              <table id="tableGira" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>FOLIO</th>
+                  <th>FECHA</th>
+                  <th>NOMBRE DEL EVENTO</th>
+                  <th>ORGANIZADOR</th>
+                  <th>DELEGACIÓN MUNIPAL</th>
+                  <th></th>
                 </tr>
                 </thead>
                 <tbody>

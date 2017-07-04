@@ -1,8 +1,16 @@
 <?php
 
 /*require 'app/model/universitario.class.php';*/
-
+require_once('app/bd/conexion.php');
 class mvc_controllerUserSup {  
+    protected $acceso;
+	protected $conexion;
+
+	public function __construct() 
+	{
+		$this->acceso = new accesoDB(); 
+	 	$this->conexion = $this->acceso->conDB();
+	} 
 	
 
   function index()
@@ -27,8 +35,15 @@ class mvc_controllerUserSup {
    {
 		$pagina=$this->load_template('');	/*titulo de la pagina */			
 		$html = $this->load_page('app/views/default/modules/userSup/m.aprobacionGira.php');
-		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
+		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);
+	
+      $historial = $this->datosGiraTabla();
+		$pagina = $this->replace_historial('/\#HISTORIAL\#/ms' ,$historial , $pagina);	
+		
+		
+	
 		$this->view_page($pagina);
+		
    }
     function aprobacionPregira()
    {
@@ -52,6 +67,33 @@ class mvc_controllerUserSup {
 		$pagina = $this->replace_content('/\#CONTENIDO\#/ms' ,$html , $pagina);		
 		$this->view_page($pagina);
    }
+   
+   
+   public function datosGiraTabla()	{
+		$datosGira = array();
+		$consulta = "SELECT g.ngira,g.fecha,g.nombre_evento,g.responsable,d.delegacion FROM gira g LEFT JOIN delegaciones d ON d.id = g.delegacion_id";
+		$resultado = mysql_query($consulta,$this->conexion) or die (mysql_error());
+		if($resultado)
+		{
+			while($filaTmp = mysql_fetch_assoc($resultado))
+				$datosGira[] = $filaTmp;
+		}
+		else
+			$datosDependencia = $this->conexion->errno . " : " . $this->conexion->error . "\n";
+		if(is_array($datosGira))
+		{
+			foreach ($datosGira as $datosGira) 
+			{
+				
+				$tabla .= "<tr><td> GR-".$datosGira["ngira"]."</td><td>".$datosGira["fecha"]."</td><td>".$datosGira["nombre_evento"]."</td><td>".$datosGira["responsable"]."</td><td>".$datosGira["delegacion"]."</td><td align='center'><a href=''><i class='fa fa-search'></i></a></td></tr>";
+
+			}
+		} 
+		
+
+
+		return $tabla;
+	}
    
 
 
@@ -122,6 +164,12 @@ class mvc_controllerUserSup {
 
 
    private function replace_menuAdm($in='/\#MENU\#/ms', $out,$pagina)
+	{
+		 return preg_replace($in, $out, $pagina);	 	
+	}
+	
+	
+	private function replace_historial($in='/\#HISTORIAL\#/ms', $out,$pagina)
 	{
 		 return preg_replace($in, $out, $pagina);	 	
 	}
