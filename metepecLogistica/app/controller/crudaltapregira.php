@@ -6,7 +6,9 @@ if(isset($_GET["accion"]))
 	switch($_GET["accion"])
 	{
 		case 'datosAltaPreGira':
-			print_r($_POST["Datos"]);
+			// print_r($_POST["Datos"]);
+			$datospG = $pregira->altaPreGira($_POST["Datos"]);
+			header('location:../../index.php?action=crearPregira');
 			break;
 	}
 }
